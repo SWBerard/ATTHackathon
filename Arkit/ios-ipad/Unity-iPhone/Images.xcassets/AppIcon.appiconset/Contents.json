@@ -1,0 +1,41 @@
+{
+	"images" : [
+		{
+			"filename" : "Icon-72.png",
+			"idiom" : "ipad",
+			"scale" : "1x",
+			"size" : "72x72"
+		},
+		{
+			"filename" : "Icon-144.png",
+			"idiom" : "ipad",
+			"scale" : "2x",
+			"size" : "72x72"
+		},
+		{
+			"filename" : "Icon-76.png",
+			"idiom" : "ipad",
+			"scale" : "1x",
+			"size" : "76x76"
+		},
+		{
+			"filename" : "Icon-152.png",
+			"idiom" : "ipad",
+			"scale" : "2x",
+			"size" : "76x76"
+		},
+		{
+			"filename" : "Icon-167.png",
+			"idiom" : "ipad",
+			"scale" : "2x",
+			"size" : "83.5x83.5"
+		}
+	],
+	"info" : {
+		"author" : "xcode",
+		"version" : 1
+	},
+	"properties" : {
+		"pre-rendered" : false
+	}
+}
