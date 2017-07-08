@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.19" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="ipad10_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="ARkitScene" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4aL-dZ-xXL"/>
+                        <viewControllerLayoutGuide type="bottom" id="74p-48-501"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Ei-sX-kNs">
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofE-Aw-4ga">
+                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                                <subviews>
+                                    <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZEn-aG-wKa">
+                                        <rect key="frame" x="0.0" y="0.0" width="912" height="834"/>
+                                    </arscnView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="255" horizontalCompressionResistancePriority="757" text="khjasdkjashdk" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Uto-yM-XLn">
+                                        <rect key="frame" x="912" y="0.0" width="200" height="834"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="jqI-0L-LbN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ofE-Aw-4ga" firstAttribute="width" secondItem="0Ei-sX-kNs" secondAttribute="width" id="AQt-Df-201"/>
+                            <constraint firstItem="ofE-Aw-4ga" firstAttribute="height" secondItem="0Ei-sX-kNs" secondAttribute="height" id="FdP-sf-ZkO"/>
+                            <constraint firstItem="ofE-Aw-4ga" firstAttribute="centerX" secondItem="0Ei-sX-kNs" secondAttribute="centerX" id="e2l-yR-7z4"/>
+                            <constraint firstItem="ofE-Aw-4ga" firstAttribute="centerY" secondItem="0Ei-sX-kNs" secondAttribute="centerY" id="kzj-kP-etH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="ZEn-aG-wKa" id="aAz-Wd-bcX"/>
+                        <outlet property="textView" destination="Uto-yM-XLn" id="CQ6-Qn-4rB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
