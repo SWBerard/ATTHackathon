@@ -15,18 +15,68 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet weak var textView: UITextView!
     var userAnchorIds: Set<UUID> = []
+    var supermanNodes: Set<SCNNode> = []
+    var batmanNodes: Set<SCNNode> = []
+    var wonderWomanNodes: Set<SCNNode> = []
+    var aquamanNodes: Set<SCNNode> = []
+    var superMmanVideoNode: SCNNode!
+    var batmanVideoNode: SCNNode!
+    var wonderWomanVideoNode: SCNNode!
+    var auqamanVideoNode: SCNNode!
     lazy var superman: SCNNode = {
+        let scene = SCNScene(named: "art.scnassets/superman.dae")!.rootNode
+        let node = SCNNode()
+        let wrapper = SCNNode()
+        wrapper.transform = SCNMatrix4Rotate(SCNMatrix4MakeScale(0.0025, 0.0025, 0.0025), 0, 1, 0, 0)
+        scene.childNodes.forEach { wrapper.addChildNode($0) }
+        node.addChildNode(wrapper)
+        let url = Bundle.main.url(forResource: "batman", withExtension: "mp4")!
+        let hieght: CGFloat = 9.0/16.0
+        let videoNode = self.createVideoNode(url: url, width: 1, height:hieght).0
+        videoNode.position = .init(0, hieght / 2 + 0.5, 0)
+        node.addChildNode(videoNode)
+        return node
+    }()
+    lazy var batman: SCNNode = {
         let scene = SCNScene(named: "art.scnassets/batmanidle.dae")!.rootNode
         let node = SCNNode()
         let wrapper = SCNNode()
         wrapper.transform = SCNMatrix4Rotate(SCNMatrix4MakeScale(0.0025, 0.0025, 0.0025), 0, 1, 0, 0)
         scene.childNodes.forEach { wrapper.addChildNode($0) }
         node.addChildNode(wrapper)
-//        let url = Bundle.main.url(forResource: "a", withExtension: "mp4")!
-//        let hieght: CGFloat = 9.0/16.0
-//        let videoNode = self.createVideoNode(url: url, width: 1, height:hieght).0
-//        videoNode.position = .init(0, hieght / 2 + 0.5, 0)
-//        node.addChildNode(videoNode)
+        let url = Bundle.main.url(forResource: "batman", withExtension: "mp4")!
+        let hieght: CGFloat = 9.0/16.0
+        let videoNode = self.createVideoNode(url: url, width: 1, height:hieght).0
+        videoNode.position = .init(0, hieght / 2 + 0.5, 0)
+        node.addChildNode(videoNode)
+        return node
+    }()
+    lazy var wonderWoman: SCNNode = {
+        let scene = SCNScene(named: "art.scnassets/wonderwoman.dae")!.rootNode
+        let node = SCNNode()
+        let wrapper = SCNNode()
+        wrapper.transform = SCNMatrix4Rotate(SCNMatrix4MakeScale(0.0025, 0.0025, 0.0025), 0, 1, 0, 0)
+        scene.childNodes.forEach { wrapper.addChildNode($0) }
+        node.addChildNode(wrapper)
+        let url = Bundle.main.url(forResource: "batman", withExtension: "mp4")!
+        let hieght: CGFloat = 9.0/16.0
+        let videoNode = self.createVideoNode(url: url, width: 1, height:hieght).0
+        videoNode.position = .init(0, hieght / 2 + 0.5, 0)
+        node.addChildNode(videoNode)
+        return node
+    }()
+    lazy var aquaman: SCNNode = {
+        let scene = SCNScene(named: "art.scnassets/aquaman.dae")!.rootNode
+        let node = SCNNode()
+        let wrapper = SCNNode()
+        wrapper.transform = SCNMatrix4Rotate(SCNMatrix4MakeScale(0.0025, 0.0025, 0.0025), 0, 1, 0, 0)
+        scene.childNodes.forEach { wrapper.addChildNode($0) }
+        node.addChildNode(wrapper)
+        let url = Bundle.main.url(forResource: "batman", withExtension: "mp4")!
+        let hieght: CGFloat = 9.0/16.0
+        let videoNode = self.createVideoNode(url: url, width: 1, height:hieght).0
+        videoNode.position = .init(0, hieght / 2 + 0.5, 0)
+        node.addChildNode(videoNode)
         return node
     }()
     override func viewDidLoad() {
@@ -34,24 +84,16 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
         sceneView.delegate = self
-        sceneView.session.delegate = self
+//        sceneView.session.delegate = self
         // Set the scene to the view
         sceneView.scene = SCNScene()
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(tap))
         sceneView.addGestureRecognizer(recognizer)
         let pinch = UIPinchGestureRecognizer(target: self, action: #selector(pinch(recognizer:)))
         sceneView.addGestureRecognizer(pinch)
-//        let right = UISwipeGestureRecognizer(target: self, action: #selector(rightSwipe(recognizer:)))
-//        right.direction = .right
-//        sceneView.addGestureRecognizer(right)
-//        let left = UISwipeGestureRecognizer(target: self, action: #selector(leftSwipe(recognizer:)))
-//        left.direction = .left
-//        sceneView.addGestureRecognizer(left)
         let pan = UIPanGestureRecognizer(target: self, action: #selector(pan(recognizer:)))
-//        pan.require(toFail: right)
-//        pan.require(toFail: left)
         sceneView.addGestureRecognizer(pan)
-        textViewWidthConstraint.constant = .ulpOfOne
+        //textViewWidthConstraint.constant = .ulpOfOne
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -62,6 +104,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         configuration.isLightEstimationEnabled = true
         // Run the view's session
         sceneView.session = ARSession()
+            sceneView.debugOptions = [ARSCNDebugOptions.showWorldOrigin, ARSCNDebugOptions.showFeaturePoints]
         sceneView.session.run(configuration)
         sceneView.showsStatistics = true
         sceneView.scene.rootNode.addChildNode(superman)
@@ -76,7 +119,21 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
 
     @objc func tap(recognizer: UITapGestureRecognizer) {
-        let location = recognizer.location(in: view)
+        let location = recognizer.location(in: sceneView)
+        let geometeryHits = sceneView.hitTest(location, options: nil)
+        if let node = geometeryHits.first?.node {
+            if supermanNodes.contains(node) {
+                log(text: "You tapped superman!")
+            } else if batmanNodes.contains(batman) {
+                log(text: "You tapped batman!")
+            } else if wonderWomanNodes.contains(node) {
+                log(text: "You tapped wonder woman!")
+            } else if aquamanNodes.contains(node){
+                log(text: "You tapped aquaman")
+            }
+            return
+        }
+
         let normalizedPoint = CGPoint(x: location.x / view.bounds.size.width, y: location.y / view.bounds.size.height)
         let results = sceneView.session.currentFrame?.hitTest(normalizedPoint, types: [.estimatedHorizontalPlane, .existingPlane])
         guard let closest = results?.first else {
@@ -88,7 +145,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
 
     @objc func pinch(recognizer: UIPinchGestureRecognizer) {
-        let scale = recognizer.scale
+        print(superman.scale.x)
+        let scale = 0.9*recognizer.scale + 0.1*recognizer.scale * CGFloat(superman.scale.x)
         superman.scale = .init(scale, scale, scale)
     }
 
@@ -106,9 +164,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             break
         }
     }
-    
+
     var isDebugViewVisible = false
-    
+
     func toggleDebugView() {
         if isDebugViewVisible {
             isDebugViewVisible = false
@@ -136,7 +194,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         spriteKitScene.scaleMode = .aspectFill
         videoSpriteKitNode.position = CGPoint(x: spriteKitScene.size.width / 2.0, y: spriteKitScene.size.height / 2.0)
         videoSpriteKitNode.size = spriteKitScene.size
-        videoSpriteKitNode.xScale = -1
+        videoSpriteKitNode.yScale = -1
         spriteKitScene.addChild(videoSpriteKitNode)
 
         videoNode.geometry?.firstMaterial?.diffuse.contents = spriteKitScene
@@ -159,7 +217,10 @@ extension ViewController: ARSessionDelegate {
         return superman
     }
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        print(type(of: anchor))
+
         if let anchor = anchor as? ARPlaneAnchor {
+
             self.log(text: "Adding plane anchor: \(anchor)")
             let plane = SCNPlane(width: CGFloat(anchor.extent.x), height: CGFloat(anchor.extent.z))
             let planeNode = SCNNode(geometry: plane)
@@ -180,9 +241,13 @@ extension ViewController: ARSessionDelegate {
 
     }
 
-    func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
-        
-    }
+//    func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
+//        let a = anchors.filter ({$0 is ARPlaneAnchor})
+//        if a.count > 0 {
+//            log(text: a)
+//        }
+//
+//    }
 
     func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
         switch camera.trackingState {
@@ -195,4 +260,3 @@ extension ViewController: ARSessionDelegate {
         }
     }
 }
-

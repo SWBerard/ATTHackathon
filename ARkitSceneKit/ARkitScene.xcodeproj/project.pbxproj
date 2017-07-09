@@ -30,6 +30,10 @@
 		043AD37D1F11B21D004FEFE3 /* OverlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayViewController.swift; sourceTree = "<group>"; };
 		043AD37F1F11B278004FEFE3 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		04D741591F11B82B004790BC /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		8F442AA21F11DD8300D92BAE /* aquamanMovie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = aquamanMovie.mp4; sourceTree = "<group>"; };
+		8F442AA31F11DD8300D92BAE /* supermanMovie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = supermanMovie.mp4; sourceTree = "<group>"; };
+		8F442AA41F11DD8300D92BAE /* batmanMovie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = batmanMovie.mp4; sourceTree = "<group>"; };
+		8F442AA51F11DD8300D92BAE /* wonderWomanMovie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = wonderWomanMovie.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,10 @@
 				032385751EFEF74C00F241D1 /* art.scnassets */,
 				032385771EFEF74C00F241D1 /* ViewController.swift */,
 				032385791EFEF74C00F241D1 /* Main.storyboard */,
+				8F442AA21F11DD8300D92BAE /* aquamanMovie.mp4 */,
+				8F442AA31F11DD8300D92BAE /* supermanMovie.mp4 */,
+				8F442AA41F11DD8300D92BAE /* batmanMovie.mp4 */,
+				8F442AA51F11DD8300D92BAE /* wonderWomanMovie.mp4 */,
 				0323857C1EFEF74C00F241D1 /* Assets.xcassets */,
 				0323857E1EFEF74C00F241D1 /* LaunchScreen.storyboard */,
 				032385811EFEF74C00F241D1 /* Info.plist */,
