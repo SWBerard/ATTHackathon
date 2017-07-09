@@ -51,4 +51,16 @@ extension MasterViewController: MenuDelegate {
     func userWantsToToggleDebugView() {
         arVC?.toggleDebugView()
     }
+    
+    func userTappedOverlayView(_ sender: UITapGestureRecognizer) {
+        arVC?.tap(recognizer: sender)
+    }
+    
+    func userPinchedOverlayView(_ sender: UIPinchGestureRecognizer) {
+        arVC?.pinch(recognizer: sender)
+    }
+    
+    func userPannedView(_ sender: UIPanGestureRecognizer) {
+        arVC?.pan(recognizer: sender)
+    }
 }
