@@ -4,8 +4,8 @@
 		<contributor>
 			<authoring_tool>CINEMA4D 13.016 COLLADA Exporter</authoring_tool>
 		</contributor>
-		<created>2017-07-09T00:24:34Z</created>
-		<modified>2017-07-09T00:24:34Z</modified>
+		<created>2017-07-09T00:36:47Z</created>
+		<modified>2017-07-09T00:36:47Z</modified>
 		<unit meter="0.01" name="centimeter"/>
 		<up_axis>Y_UP</up_axis>
 	</asset>
@@ -11446,61 +11446,61 @@
 				<rotate sid="rotateZ">0 0 1 -0</rotate>
 				<scale sid="scale">1 1 1</scale>
 				<node id="ID26" name="Base_Hips" sid="joint1" type="JOINT">
-					<translate sid="translate">35.0904 1559.9 -62.2527</translate>
-					<rotate sid="rotateY">0 1 0 27.4007</rotate>
-					<rotate sid="rotateX">1 0 0 -56.6472</rotate>
-					<rotate sid="rotateZ">0 0 1 -44.1457</rotate>
+					<translate sid="translate">-14.3266 1640.06 445.727</translate>
+					<rotate sid="rotateY">0 1 0 27.9496</rotate>
+					<rotate sid="rotateX">1 0 0 -56.2198</rotate>
+					<rotate sid="rotateZ">0 0 1 -44.8086</rotate>
 					<scale sid="scale">1 1 1</scale>
 					<node id="ID72" name="Base_LeftUpLeg" sid="joint2" type="JOINT">
-						<translate sid="translate">222.069 44.0027 -14.2131</translate>
-						<rotate sid="rotateY">0 1 0 82.2372</rotate>
-						<rotate sid="rotateX">1 0 0 -40.2401</rotate>
-						<rotate sid="rotateZ">0 0 1 -74.6919</rotate>
+						<translate sid="translate">222.069 44.0026 -14.2131</translate>
+						<rotate sid="rotateY">0 1 0 85.4704</rotate>
+						<rotate sid="rotateX">1 0 0 -33.8638</rotate>
+						<rotate sid="rotateZ">0 0 1 -83.5357</rotate>
 						<scale sid="scale">1 1 1</scale>
 						<node id="ID118" name="Base_LeftLeg" sid="joint3" type="JOINT">
-							<translate sid="translate">757.639 -4.85179 -79.1825</translate>
-							<rotate sid="rotateY">0 1 0 313.458</rotate>
-							<rotate sid="rotateX">1 0 0 -59.889</rotate>
-							<rotate sid="rotateZ">0 0 1 -313.318</rotate>
+							<translate sid="translate">757.639 -4.85789 -79.1784</translate>
+							<rotate sid="rotateY">0 1 0 281.021</rotate>
+							<rotate sid="rotateX">1 0 0 -15.0282</rotate>
+							<rotate sid="rotateZ">0 0 1 -293.589</rotate>
 							<scale sid="scale">1 1 1</scale>
 							<node id="ID164" name="Base_LeftFoot" sid="joint4" type="JOINT">
-								<translate sid="translate">819.519 -4.5331 86.4774</translate>
-								<rotate sid="rotateY">0 1 0 234.627</rotate>
-								<rotate sid="rotateX">1 0 0 9.55865</rotate>
-								<rotate sid="rotateZ">0 0 1 -189.427</rotate>
+								<translate sid="translate">819.518 -4.53305 86.4774</translate>
+								<rotate sid="rotateY">0 1 0 244.021</rotate>
+								<rotate sid="rotateX">1 0 0 10.9472</rotate>
+								<rotate sid="rotateZ">0 0 1 -192.561</rotate>
 								<scale sid="scale">1 1 1</scale>
 								<node id="ID210" name="Base_LeftToeBase" sid="joint5" type="JOINT">
-									<translate sid="translate">196.577 2.31934 -116.906</translate>
+									<translate sid="translate">196.577 2.31941 -116.906</translate>
 									<rotate sid="rotateY">0 1 0 244.071</rotate>
 									<rotate sid="rotateX">1 0 0 89.5824</rotate>
-									<rotate sid="rotateZ">0 0 1 -84.5743</rotate>
+									<rotate sid="rotateZ">0 0 1 -84.5742</rotate>
 									<scale sid="scale">1 1 1</scale>
 								</node>
 							</node>
 						</node>
 					</node>
 					<node id="ID256" name="Base_RightUpLeg" sid="joint6" type="JOINT">
-						<translate sid="translate">-104.071 81.0817 -184.518</translate>
-						<rotate sid="rotateY">0 1 0 347.58</rotate>
-						<rotate sid="rotateX">1 0 0 46.3163</rotate>
-						<rotate sid="rotateZ">0 0 1 -295.936</rotate>
-						<scale sid="scale">1 1 1</scale>
+						<translate sid="translate">-104.071 81.0816 -184.517</translate>
+						<rotate sid="rotateY">0 1 0 340.997</rotate>
+						<rotate sid="rotateX">1 0 0 43.8666</rotate>
+						<rotate sid="rotateZ">0 0 1 -298.617</rotate>
+						<scale sid="scale">1 0.999999 1</scale>
 						<node id="ID302" name="Base_RightLeg" sid="joint7" type="JOINT">
-							<translate sid="translate">-760.051 -17.9997 48.1428</translate>
-							<rotate sid="rotateY">0 1 0 287.104</rotate>
-							<rotate sid="rotateX">1 0 0 8.51698</rotate>
-							<rotate sid="rotateZ">0 0 1 -358.683</rotate>
+							<translate sid="translate">-760.051 -17.9995 48.1428</translate>
+							<rotate sid="rotateY">0 1 0 277.942</rotate>
+							<rotate sid="rotateX">1 0 0 15.2581</rotate>
+							<rotate sid="rotateZ">0 0 1 -358.576</rotate>
 							<scale sid="scale">1 1 1</scale>
 							<node id="ID348" name="Base_RightFoot" sid="joint8" type="JOINT">
-								<translate sid="translate">-823.423 -0.794653 -32.877</translate>
-								<rotate sid="rotateY">0 1 0 45.9942</rotate>
-								<rotate sid="rotateX">1 0 0 -10.3534</rotate>
-								<rotate sid="rotateZ">0 0 1 -339.108</rotate>
+								<translate sid="translate">-823.423 -0.79492 -32.8774</translate>
+								<rotate sid="rotateY">0 1 0 26.9096</rotate>
+								<rotate sid="rotateX">1 0 0 2.03696</rotate>
+								<rotate sid="rotateZ">0 0 1 -343.199</rotate>
 								<scale sid="scale">1 1 1</scale>
 								<node id="ID394" name="Base_RightToeBase" sid="joint9" type="JOINT">
-									<translate sid="translate">-228.638 3.67362 -5.15109</translate>
+									<translate sid="translate">-228.638 3.67362 -5.15118</translate>
 									<rotate sid="rotateY">0 1 0 60.799</rotate>
-									<rotate sid="rotateX">1 0 0 0.546094</rotate>
+									<rotate sid="rotateX">1 0 0 0.546091</rotate>
 									<rotate sid="rotateZ">0 0 1 -359.238</rotate>
 									<scale sid="scale">1 1 1</scale>
 								</node>
@@ -11508,40 +11508,40 @@
 						</node>
 					</node>
 					<node id="ID440" name="Base_Spine" sid="joint10" type="JOINT">
-						<translate sid="translate">-60.716 36.007 124.109</translate>
-						<rotate sid="rotateY">0 1 0 107.987</rotate>
-						<rotate sid="rotateX">1 0 0 78.5302</rotate>
-						<rotate sid="rotateZ">0 0 1 -139.78</rotate>
+						<translate sid="translate">-60.7159 36.0069 124.109</translate>
+						<rotate sid="rotateY">0 1 0 163.896</rotate>
+						<rotate sid="rotateX">1 0 0 83.0501</rotate>
+						<rotate sid="rotateZ">0 0 1 -83.5462</rotate>
 						<scale sid="scale">1 1 1</scale>
 						<node id="ID486" name="Base_Spine1" sid="joint11" type="JOINT">
-							<translate sid="translate">402.331 3.09492e-05 37.3681</translate>
-							<rotate sid="rotateY">0 1 0 92.3118</rotate>
-							<rotate sid="rotateX">1 0 0 -31.1816</rotate>
-							<rotate sid="rotateZ">0 0 1 -126.786</rotate>
+							<translate sid="translate">402.331 2.78234e-05 37.3682</translate>
+							<rotate sid="rotateY">0 1 0 87.4979</rotate>
+							<rotate sid="rotateX">1 0 0 -28.4153</rotate>
+							<rotate sid="rotateZ">0 0 1 -131.85</rotate>
 							<scale sid="scale">1 1 1</scale>
 							<node id="ID532" name="Base_LeftShoulder" sid="joint12" type="JOINT">
-								<translate sid="translate">227.965 65.1425 168.652</translate>
-								<rotate sid="rotateY">0 1 0 69.2002</rotate>
-								<rotate sid="rotateX">1 0 0 -24.9744</rotate>
-								<rotate sid="rotateZ">0 0 1 -330.465</rotate>
+								<translate sid="translate">227.965 65.1426 168.652</translate>
+								<rotate sid="rotateY">0 1 0 32.4202</rotate>
+								<rotate sid="rotateX">1 0 0 -8.77201</rotate>
+								<rotate sid="rotateZ">0 0 1 -331.362</rotate>
 								<scale sid="scale">1 1 1</scale>
 								<node id="ID578" name="Base_LeftArm" sid="joint13" type="JOINT">
 									<translate sid="translate">217.222 10.5533 35.9516</translate>
-									<rotate sid="rotateY">0 1 0 16.1625</rotate>
-									<rotate sid="rotateX">1 0 0 -14.5137</rotate>
-									<rotate sid="rotateZ">0 0 1 -5.39132</rotate>
+									<rotate sid="rotateY">0 1 0 27.336</rotate>
+									<rotate sid="rotateX">1 0 0 -38.1215</rotate>
+									<rotate sid="rotateZ">0 0 1 -20.7085</rotate>
 									<scale sid="scale">1 1 1</scale>
 									<node id="ID624" name="Base_LeftForeArm" sid="joint14" type="JOINT">
-										<translate sid="translate">453.469 79.2902 -151.873</translate>
-										<rotate sid="rotateY">0 1 0 9.75291</rotate>
-										<rotate sid="rotateX">1 0 0 6.05172</rotate>
-										<rotate sid="rotateZ">0 0 1 -47.6957</rotate>
+										<translate sid="translate">453.469 79.29 -151.873</translate>
+										<rotate sid="rotateY">0 1 0 10.7469</rotate>
+										<rotate sid="rotateX">1 0 0 6.82554</rotate>
+										<rotate sid="rotateZ">0 0 1 -57.8567</rotate>
 										<scale sid="scale">1 1 1</scale>
 										<node id="ID670" name="Base_LeftHand" sid="joint15" type="JOINT">
-											<translate sid="translate">417.678 -34.9656 -30.9954</translate>
-											<rotate sid="rotateY">0 1 0 323.035</rotate>
-											<rotate sid="rotateX">1 0 0 42.0997</rotate>
-											<rotate sid="rotateZ">0 0 1 -75.0727</rotate>
+											<translate sid="translate">417.678 -34.9656 -30.9958</translate>
+											<rotate sid="rotateY">0 1 0 317.121</rotate>
+											<rotate sid="rotateX">1 0 0 33.4245</rotate>
+											<rotate sid="rotateZ">0 0 1 -81.9776</rotate>
 											<scale sid="scale">1 1 1</scale>
 											<node id="ID716" name="Base_LeftHandThumb1" sid="joint16" type="JOINT">
 												<translate sid="translate">108.564 -11.484 24.669</translate>
@@ -11550,28 +11550,28 @@
 												<rotate sid="rotateZ">0 0 1 -202.11</rotate>
 												<scale sid="scale">1 1 1</scale>
 												<node id="ID762" name="Base_LeftHandThumb2" sid="joint17" type="JOINT">
-													<translate sid="translate">88.7826 8.02704 1.54114</translate>
+													<translate sid="translate">88.7826 8.02711 1.5411</translate>
 													<rotate sid="rotateY">0 1 0 354.567</rotate>
 													<rotate sid="rotateX">1 0 0 -6.06535</rotate>
 													<rotate sid="rotateZ">0 0 1 -15.1011</rotate>
 													<scale sid="scale">1 1 1</scale>
 													<node id="ID808" name="Base_LeftHandThumb3" sid="joint18" type="JOINT">
-														<translate sid="translate">67.1666 4.27932 5.17509</translate>
+														<translate sid="translate">67.1665 4.2793 5.17517</translate>
 														<rotate sid="rotateY">0 1 0 356.288</rotate>
-														<rotate sid="rotateX">1 0 0 -1.97721</rotate>
+														<rotate sid="rotateX">1 0 0 -1.97719</rotate>
 														<rotate sid="rotateZ">0 0 1 -359.773</rotate>
 														<scale sid="scale">1 1 1</scale>
 													</node>
 												</node>
 											</node>
 											<node id="ID854" name="Base_LeftHandIndex1" sid="joint19" type="JOINT">
-												<translate sid="translate">221.082 99.4217 -69.5968</translate>
+												<translate sid="translate">221.082 99.4218 -69.5967</translate>
 												<rotate sid="rotateY">0 1 0 148.799</rotate>
 												<rotate sid="rotateX">1 0 0 82.1911</rotate>
 												<rotate sid="rotateZ">0 0 1 -248.792</rotate>
 												<scale sid="scale">1 1 1</scale>
 												<node id="ID900" name="Base_LeftHandIndex2" sid="joint20" type="JOINT">
-													<translate sid="translate">58.8004 5.77849 -2.36551</translate>
+													<translate sid="translate">58.8006 5.77843 -2.3656</translate>
 													<rotate sid="rotateY">0 1 0 334.651</rotate>
 													<rotate sid="rotateX">1 0 0 3.41664</rotate>
 													<rotate sid="rotateZ">0 0 1 -357.522</rotate>
@@ -11583,9 +11583,9 @@
 												<rotate sid="rotateY">0 1 0 333.757</rotate>
 												<rotate sid="rotateX">1 0 0 60.9074</rotate>
 												<rotate sid="rotateZ">0 0 1 -65.2333</rotate>
-												<scale sid="scale">1 0.999999 1</scale>
+												<scale sid="scale">1 1 1</scale>
 												<node id="ID992" name="Base_LeftHandRing2" sid="joint22" type="JOINT">
-													<translate sid="translate">78.1192 3.01012 -3.62762</translate>
+													<translate sid="translate">78.1193 3.01009 -3.62779</translate>
 													<rotate sid="rotateY">0 1 0 323.704</rotate>
 													<rotate sid="rotateX">1 0 0 -2.13024</rotate>
 													<rotate sid="rotateZ">0 0 1 -10.5037</rotate>
@@ -11597,48 +11597,48 @@
 								</node>
 							</node>
 							<node id="ID1038" name="Base_Neck" sid="joint23" type="JOINT">
-								<translate sid="translate">205.89 65.1955 330.021</translate>
-								<rotate sid="rotateY">0 1 0 9.58258</rotate>
-								<rotate sid="rotateX">1 0 0 -51.205</rotate>
-								<rotate sid="rotateZ">0 0 1 -43.077</rotate>
+								<translate sid="translate">205.891 65.195 330.022</translate>
+								<rotate sid="rotateY">0 1 0 0.324222</rotate>
+								<rotate sid="rotateX">1 0 0 -62.0348</rotate>
+								<rotate sid="rotateZ">0 0 1 -38.6389</rotate>
 								<scale sid="scale">1 1 1</scale>
 								<node id="ID1084" name="Base_Head" sid="joint24" type="JOINT">
-									<translate sid="translate">167.191 -2.75563e-05 18.5505</translate>
-									<rotate sid="rotateY">0 1 0 331.75</rotate>
-									<rotate sid="rotateX">1 0 0 -77.301</rotate>
-									<rotate sid="rotateZ">0 0 1 -21.118</rotate>
+									<translate sid="translate">167.191 -0.000121053 18.5504</translate>
+									<rotate sid="rotateY">0 1 0 326.503</rotate>
+									<rotate sid="rotateX">1 0 0 -63.621</rotate>
+									<rotate sid="rotateZ">0 0 1 -9.79146</rotate>
 									<scale sid="scale">1 1 1</scale>
 								</node>
 							</node>
 							<node id="ID1130" name="Base_CapeLeft1" sid="joint25" type="JOINT">
 								<translate sid="translate">282.023 372.922 72.069</translate>
-								<rotate sid="rotateY">0 1 0 306.089</rotate>
-								<rotate sid="rotateX">1 0 0 30.6474</rotate>
-								<rotate sid="rotateZ">0 0 1 -176.122</rotate>
+								<rotate sid="rotateY">0 1 0 298.827</rotate>
+								<rotate sid="rotateX">1 0 0 33.7823</rotate>
+								<rotate sid="rotateZ">0 0 1 -168.457</rotate>
 								<scale sid="scale">1 1 1</scale>
 								<node id="ID1176" name="Base_CapeLeft2" sid="joint26" type="JOINT">
 									<translate sid="translate">442.195 -2.55795e-13 -1.21503e-12</translate>
-									<rotate sid="rotateY">0 1 0 14.0402</rotate>
-									<rotate sid="rotateX">1 0 0 2.88073</rotate>
-									<rotate sid="rotateZ">0 0 1 -342.647</rotate>
+									<rotate sid="rotateY">0 1 0 19.9208</rotate>
+									<rotate sid="rotateX">1 0 0 -0.0682851</rotate>
+									<rotate sid="rotateZ">0 0 1 -335.187</rotate>
 									<scale sid="scale">1 1 1</scale>
 									<node id="ID1222" name="Base_CapeLeft3" sid="joint27" type="JOINT">
 										<translate sid="translate">494.552 1.27898e-12 1.27898e-13</translate>
-										<rotate sid="rotateY">0 1 0 7.84671</rotate>
-										<rotate sid="rotateX">1 0 0 6.2523</rotate>
-										<rotate sid="rotateZ">0 0 1 -5.61421</rotate>
+										<rotate sid="rotateY">0 1 0 13.3542</rotate>
+										<rotate sid="rotateX">1 0 0 3.54897</rotate>
+										<rotate sid="rotateZ">0 0 1 -359.755</rotate>
 										<scale sid="scale">1 1 1</scale>
 										<node id="ID1268" name="Base_CapeLeft4" sid="joint28" type="JOINT">
 											<translate sid="translate">527.149 2.55795e-13 -1.02318e-12</translate>
-											<rotate sid="rotateY">0 1 0 7.18729</rotate>
-											<rotate sid="rotateX">1 0 0 5.43549</rotate>
-											<rotate sid="rotateZ">0 0 1 -355.972</rotate>
+											<rotate sid="rotateY">0 1 0 15.017</rotate>
+											<rotate sid="rotateX">1 0 0 0.76239</rotate>
+											<rotate sid="rotateZ">0 0 1 -350.032</rotate>
 											<scale sid="scale">1 1 1</scale>
 											<node id="ID1314" name="Base_CapeLeft5" sid="joint29" type="JOINT">
 												<translate sid="translate">312.396 1.27898e-12 1.27898e-13</translate>
-												<rotate sid="rotateY">0 1 0 2.47076</rotate>
-												<rotate sid="rotateX">1 0 0 37.7266</rotate>
-												<rotate sid="rotateZ">0 0 1 -0.20991</rotate>
+												<rotate sid="rotateY">0 1 0 13.4493</rotate>
+												<rotate sid="rotateX">1 0 0 32.887</rotate>
+												<rotate sid="rotateZ">0 0 1 -355.255</rotate>
 												<scale sid="scale">1 1 1</scale>
 											</node>
 										</node>
@@ -11647,33 +11647,33 @@
 							</node>
 							<node id="ID1360" name="Base_CapeMid1" sid="joint30" type="JOINT">
 								<translate sid="translate">-4.1065 256.509 247.01</translate>
-								<rotate sid="rotateY">0 1 0 307.631</rotate>
-								<rotate sid="rotateX">1 0 0 30.5973</rotate>
-								<rotate sid="rotateZ">0 0 1 -192.93</rotate>
+								<rotate sid="rotateY">0 1 0 301.528</rotate>
+								<rotate sid="rotateX">1 0 0 34.5993</rotate>
+								<rotate sid="rotateZ">0 0 1 -185.548</rotate>
 								<scale sid="scale">1 1 1</scale>
 								<node id="ID1406" name="Base_CapeMid2" sid="joint31" type="JOINT">
 									<translate sid="translate">474.323 65.173 0.109654</translate>
-									<rotate sid="rotateY">0 1 0 7.78508</rotate>
-									<rotate sid="rotateX">1 0 0 3.14761</rotate>
-									<rotate sid="rotateZ">0 0 1 -336.976</rotate>
+									<rotate sid="rotateY">0 1 0 12.2156</rotate>
+									<rotate sid="rotateX">1 0 0 -1.17203</rotate>
+									<rotate sid="rotateZ">0 0 1 -328.904</rotate>
 									<scale sid="scale">1 1 1</scale>
 									<node id="ID1452" name="Base_CapeMid3" sid="joint32" type="JOINT">
 										<translate sid="translate">496.821 9.57824 -3.7979e-05</translate>
-										<rotate sid="rotateY">0 1 0 6.96575</rotate>
-										<rotate sid="rotateX">1 0 0 4.71287</rotate>
-										<rotate sid="rotateZ">0 0 1 -349.075</rotate>
+										<rotate sid="rotateY">0 1 0 12.6881</rotate>
+										<rotate sid="rotateX">1 0 0 3.16132</rotate>
+										<rotate sid="rotateZ">0 0 1 -342.058</rotate>
 										<scale sid="scale">1 1 1</scale>
 										<node id="ID1498" name="Base_CapeMid4" sid="joint33" type="JOINT">
 											<translate sid="translate">543.231 15.1752 -3.43726e-05</translate>
-											<rotate sid="rotateY">0 1 0 6.81697</rotate>
-											<rotate sid="rotateX">1 0 0 5.82115</rotate>
-											<rotate sid="rotateZ">0 0 1 -345.669</rotate>
+											<rotate sid="rotateY">0 1 0 15.2181</rotate>
+											<rotate sid="rotateX">1 0 0 4.16418</rotate>
+											<rotate sid="rotateZ">0 0 1 -338.531</rotate>
 											<scale sid="scale">1 1 1</scale>
 											<node id="ID1544" name="Base_CapeMid5" sid="joint34" type="JOINT">
 												<translate sid="translate">462.352 -84.1679 4.74739</translate>
-												<rotate sid="rotateY">0 1 0 4.96886</rotate>
-												<rotate sid="rotateX">1 0 0 6.78596</rotate>
-												<rotate sid="rotateZ">0 0 1 -357.287</rotate>
+												<rotate sid="rotateY">0 1 0 14.027</rotate>
+												<rotate sid="rotateX">1 0 0 6.60176</rotate>
+												<rotate sid="rotateZ">0 0 1 -351.388</rotate>
 												<scale sid="scale">1 1 1</scale>
 											</node>
 										</node>
@@ -11682,33 +11682,33 @@
 							</node>
 							<node id="ID1590" name="Base_CapeRight1" sid="joint35" type="JOINT">
 								<translate sid="translate">-187.726 22.1079 434.434</translate>
-								<rotate sid="rotateY">0 1 0 309.202</rotate>
-								<rotate sid="rotateX">1 0 0 30.5274</rotate>
-								<rotate sid="rotateZ">0 0 1 -197.81</rotate>
+								<rotate sid="rotateY">0 1 0 302.657</rotate>
+								<rotate sid="rotateX">1 0 0 29.8504</rotate>
+								<rotate sid="rotateZ">0 0 1 -193.262</rotate>
 								<scale sid="scale">1 1 1</scale>
 								<node id="ID1636" name="Base_CapeRight2" sid="joint36" type="JOINT">
 									<translate sid="translate">442.199 5.11591e-13 -1.27898e-13</translate>
-									<rotate sid="rotateY">0 1 0 0.720036</rotate>
-									<rotate sid="rotateX">1 0 0 5.17907</rotate>
-									<rotate sid="rotateZ">0 0 1 -344.638</rotate>
+									<rotate sid="rotateY">0 1 0 4.12645</rotate>
+									<rotate sid="rotateX">1 0 0 1.08295</rotate>
+									<rotate sid="rotateZ">0 0 1 -336.781</rotate>
 									<scale sid="scale">1 1 1</scale>
 									<node id="ID1682" name="Base_CapeRight3" sid="joint37" type="JOINT">
 										<translate sid="translate">494.554 0 5.11591e-13</translate>
-										<rotate sid="rotateY">0 1 0 3.16955</rotate>
-										<rotate sid="rotateX">1 0 0 6.45355</rotate>
-										<rotate sid="rotateZ">0 0 1 -2.55193</rotate>
+										<rotate sid="rotateY">0 1 0 7.55389</rotate>
+										<rotate sid="rotateX">1 0 0 3.11191</rotate>
+										<rotate sid="rotateZ">0 0 1 -356.43</rotate>
 										<scale sid="scale">1 1 1</scale>
 										<node id="ID1728" name="Base_CapeRight4" sid="joint38" type="JOINT">
 											<translate sid="translate">527.142 7.67386e-13 -2.43006e-12</translate>
-											<rotate sid="rotateY">0 1 0 5.51484</rotate>
-											<rotate sid="rotateX">1 0 0 5.594</rotate>
-											<rotate sid="rotateZ">0 0 1 -355.954</rotate>
+											<rotate sid="rotateY">0 1 0 12.3893</rotate>
+											<rotate sid="rotateX">1 0 0 1.38165</rotate>
+											<rotate sid="rotateZ">0 0 1 -348.581</rotate>
 											<scale sid="scale">1 1 1</scale>
 											<node id="ID1774" name="Base_CapeRight5" sid="joint39" type="JOINT">
 												<translate sid="translate">312.396 -2.55795e-13 -5.11591e-13</translate>
-												<rotate sid="rotateY">0 1 0 9.13531</rotate>
-												<rotate sid="rotateX">1 0 0 -26.335</rotate>
-												<rotate sid="rotateZ">0 0 1 -359.155</rotate>
+												<rotate sid="rotateY">0 1 0 13.2612</rotate>
+												<rotate sid="rotateX">1 0 0 -30.5899</rotate>
+												<rotate sid="rotateZ">0 0 1 -352.979</rotate>
 												<scale sid="scale">1 1 1</scale>
 											</node>
 										</node>
@@ -11716,43 +11716,43 @@
 								</node>
 							</node>
 							<node id="ID1820" name="Base_RightShoulder" sid="joint40" type="JOINT">
-								<translate sid="translate">91.8471 -36.5116 273.653</translate>
-								<rotate sid="rotateY">0 1 0 232.239</rotate>
-								<rotate sid="rotateX">1 0 0 21.6568</rotate>
-								<rotate sid="rotateZ">0 0 1 -197.145</rotate>
+								<translate sid="translate">91.8472 -36.5115 273.653</translate>
+								<rotate sid="rotateY">0 1 0 234.942</rotate>
+								<rotate sid="rotateX">1 0 0 14.9239</rotate>
+								<rotate sid="rotateZ">0 0 1 -208.319</rotate>
 								<scale sid="scale">1 1 1</scale>
 								<node id="ID1866" name="Base_RightArm" sid="joint41" type="JOINT">
-									<translate sid="translate">-220.139 -10.5532 -4.05706</translate>
-									<rotate sid="rotateY">0 1 0 42.8825</rotate>
-									<rotate sid="rotateX">1 0 0 -8.72846</rotate>
-									<rotate sid="rotateZ">0 0 1 -357.166</rotate>
+									<translate sid="translate">-220.139 -10.5534 -4.05721</translate>
+									<rotate sid="rotateY">0 1 0 51.4342</rotate>
+									<rotate sid="rotateX">1 0 0 -9.77632</rotate>
+									<rotate sid="rotateZ">0 0 1 -349.812</rotate>
 									<scale sid="scale">1 1 1</scale>
 									<node id="ID1912" name="Base_RightForeArm" sid="joint42" type="JOINT">
-										<translate sid="translate">-475.378 -79.29 52.1574</translate>
-										<rotate sid="rotateY">0 1 0 7.16035</rotate>
-										<rotate sid="rotateX">1 0 0 14.9992</rotate>
-										<rotate sid="rotateZ">0 0 1 -90.7724</rotate>
+										<translate sid="translate">-475.378 -79.2904 52.1571</translate>
+										<rotate sid="rotateY">0 1 0 3.86524</rotate>
+										<rotate sid="rotateX">1 0 0 8.92364</rotate>
+										<rotate sid="rotateZ">0 0 1 -75.9049</rotate>
 										<scale sid="scale">1 1 1</scale>
 										<node id="ID1958" name="Base_RightHand" sid="joint43" type="JOINT">
-											<translate sid="translate">-418.824 34.6765 4.98703</translate>
-											<rotate sid="rotateY">0 1 0 9.92563</rotate>
-											<rotate sid="rotateX">1 0 0 2.42085</rotate>
-											<rotate sid="rotateZ">0 0 1 -5.3458</rotate>
+											<translate sid="translate">-418.824 34.6764 4.98727</translate>
+											<rotate sid="rotateY">0 1 0 12.1785</rotate>
+											<rotate sid="rotateX">1 0 0 15.3118</rotate>
+											<rotate sid="rotateZ">0 0 1 -353.769</rotate>
 											<scale sid="scale">1 1 1</scale>
 											<node id="ID2004" name="Base_RightHandThumb1" sid="joint44" type="JOINT">
-												<translate sid="translate">-38.7513 98.0711 37.512</translate>
+												<translate sid="translate">-38.7512 98.0711 37.512</translate>
 												<rotate sid="rotateY">0 1 0 105.956</rotate>
 												<rotate sid="rotateX">1 0 0 -64.8726</rotate>
 												<rotate sid="rotateZ">0 0 1 -86.768</rotate>
 												<scale sid="scale">1 1 1</scale>
 												<node id="ID2050" name="Base_RightHandThumb2" sid="joint45" type="JOINT">
-													<translate sid="translate">-88.7805 -4.42258 6.87505</translate>
+													<translate sid="translate">-88.7805 -4.42262 6.87514</translate>
 													<rotate sid="rotateY">0 1 0 343.387</rotate>
 													<rotate sid="rotateX">1 0 0 -5.23354</rotate>
 													<rotate sid="rotateZ">0 0 1 -359.212</rotate>
 													<scale sid="scale">1 1 1</scale>
 													<node id="ID2096" name="Base_RightHandThumb3" sid="joint46" type="JOINT">
-														<translate sid="translate">-67.161 -6.39441 2.04362</translate>
+														<translate sid="translate">-67.161 -6.39436 2.04362</translate>
 														<rotate sid="rotateY">0 1 0 349.711</rotate>
 														<rotate sid="rotateX">1 0 0 -1.36944</rotate>
 														<rotate sid="rotateZ">0 0 1 -356.216</rotate>
@@ -11761,29 +11761,29 @@
 												</node>
 											</node>
 											<node id="ID2142" name="Base_RightHandIndex1" sid="joint47" type="JOINT">
-												<translate sid="translate">-220.323 121.219 19.106</translate>
+												<translate sid="translate">-220.323 121.219 19.1059</translate>
 												<rotate sid="rotateY">0 1 0 203.926</rotate>
 												<rotate sid="rotateX">1 0 0 -1.41104</rotate>
 												<rotate sid="rotateZ">0 0 1 -161.614</rotate>
 												<scale sid="scale">1 1 1</scale>
 												<node id="ID2188" name="Base_RightHandIndex2" sid="joint48" type="JOINT">
-													<translate sid="translate">-59.0708 1.3394 2.36418</translate>
+													<translate sid="translate">-59.0709 1.33936 2.36418</translate>
 													<rotate sid="rotateY">0 1 0 334.441</rotate>
-													<rotate sid="rotateX">1 0 0 0.443524</rotate>
+													<rotate sid="rotateX">1 0 0 0.443519</rotate>
 													<rotate sid="rotateZ">0 0 1 -3.76492</rotate>
 													<scale sid="scale">1 1 1</scale>
 												</node>
 											</node>
 											<node id="ID2234" name="Base_RightHandRing1" sid="joint49" type="JOINT">
-												<translate sid="translate">-218.152 8.58637 22.3358</translate>
+												<translate sid="translate">-218.152 8.58645 22.3358</translate>
 												<rotate sid="rotateY">0 1 0 238.316</rotate>
-												<rotate sid="rotateX">1 0 0 -0.57305</rotate>
+												<rotate sid="rotateX">1 0 0 -0.573054</rotate>
 												<rotate sid="rotateZ">0 0 1 -176.072</rotate>
 												<scale sid="scale">1 1 1</scale>
 												<node id="ID2280" name="Base_RightHandRing2" sid="joint50" type="JOINT">
-													<translate sid="translate">-77.0813 -12.9583 4.00344</translate>
+													<translate sid="translate">-77.0814 -12.9582 4.00341</translate>
 													<rotate sid="rotateY">0 1 0 322.621</rotate>
-													<rotate sid="rotateX">1 0 0 -3.74194</rotate>
+													<rotate sid="rotateX">1 0 0 -3.74195</rotate>
 													<rotate sid="rotateZ">0 0 1 -359.367</rotate>
 													<scale sid="scale">1 1 1</scale>
 												</node>
@@ -11795,14 +11795,14 @@
 						</node>
 					</node>
 					<node id="ID2326" name="Base_AuxRight" sid="joint51" type="JOINT">
-						<translate sid="translate">-674.771 -596.877 226.446</translate>
-						<rotate sid="rotateY">0 1 0 216.147</rotate>
-						<rotate sid="rotateX">1 0 0 19.5463</rotate>
-						<rotate sid="rotateZ">0 0 1 -114.016</rotate>
+						<translate sid="translate">-844.711 -286.819 -56.3462</translate>
+						<rotate sid="rotateY">0 1 0 236.437</rotate>
+						<rotate sid="rotateX">1 0 0 -19.3062</rotate>
+						<rotate sid="rotateZ">0 0 1 -130.399</rotate>
 						<scale sid="scale">1 1 1</scale>
 					</node>
 					<node id="ID2372" name="Base_AuxLeft" sid="joint52" type="JOINT">
-						<translate sid="translate">529.675 -109.426 187.028</translate>
+						<translate sid="translate">441.231 -756.073 629.55</translate>
 						<rotate sid="rotateY">0 1 0 249.011</rotate>
 						<rotate sid="rotateX">1 0 0 72.4028</rotate>
 						<rotate sid="rotateZ">0 0 1 -161.327</rotate>
