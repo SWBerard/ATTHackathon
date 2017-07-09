@@ -38,6 +38,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let videoNode = self.createVideoNode(url: url, width: 1, height:hieght).0
         videoNode.position = .init(0, hieght / 2 + 0.5, 0)
         node.addChildNode(videoNode)
+
         return node
     }()
     lazy var batman: SCNNode = {
@@ -112,7 +113,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.showsStatistics = true
         sceneView.scene.rootNode.addChildNode(superman)
         log(text: "start logging")
-
     }
 
     override func viewWillDisappear(_ animated: Bool) {
