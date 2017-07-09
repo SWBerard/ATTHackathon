@@ -27,17 +27,17 @@
                         <viewControllerLayoutGuide type="bottom" id="74p-48-501"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0Ei-sX-kNs">
-                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofE-Aw-4ga">
-                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <subviews>
                                     <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZEn-aG-wKa">
-                                        <rect key="frame" x="0.0" y="0.0" width="912" height="834"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="824" height="768"/>
                                     </arscnView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="255" horizontalCompressionResistancePriority="757" text="khjasdkjashdk" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Uto-yM-XLn">
-                                        <rect key="frame" x="912" y="0.0" width="200" height="834"/>
+                                        <rect key="frame" x="824" y="0.0" width="200" height="768"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="jqI-0L-LbN"/>
@@ -75,17 +75,17 @@
                         <viewControllerLayoutGuide type="bottom" id="EcF-UZ-UdG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CWM-3c-9eh">
-                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tyq-GM-b21">
-                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <connections>
                                     <segue destination="BV1-FR-VrT" kind="embed" identifier="ARViewEmbedSegue" id="cCw-kd-FYF"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ar8-BW-VXo">
-                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <connections>
                                     <segue destination="Ti8-ch-duN" kind="embed" identifier="menuEmbedSegue" id="SHp-Th-Mf0"/>
                                 </connections>
@@ -117,11 +117,11 @@
                         <viewControllerLayoutGuide type="bottom" id="1ed-hd-e5c"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lNu-K9-SjF">
-                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7f-IT-D2Z">
-                                <rect key="frame" x="60" y="740" width="48" height="30"/>
+                                <rect key="frame" x="60" y="674" width="48" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Debug">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -172,82 +172,85 @@
                         <viewControllerLayoutGuide type="bottom" id="BeZ-6D-eKq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Tap-8F-tM5">
-                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r9D-F7-Lkr">
-                                <rect key="frame" x="0.0" y="20" width="1112" height="814"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WONDER WOMAN AR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5Q-G6-in3">
-                                        <rect key="frame" x="270" y="64" width="573" height="65.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JUSTICE ARCHIVES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5Q-G6-in3">
+                                        <rect key="frame" x="253.5" y="64" width="517.5" height="65.5"/>
                                         <fontDescription key="fontDescription" name="Bungee-Regular" family="Bungee" pointSize="56"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.88235294117647056" green="0.98431372549019602" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MISSION OBJECTIVE:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhg-1j-0mo">
-                                        <rect key="frame" x="395" y="300.5" width="322.5" height="37.5"/>
-                                        <fontDescription key="fontDescription" name="Liberty" family="Liberty" pointSize="32"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WONDER WOMAN IS IS UPSET, FIGURE OUT HOW TO MAKE HER HAPPY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tad-nP-EmL">
-                                        <rect key="frame" x="146.5" y="362" width="819" height="28"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I just NEED you to turn on YOUR CAMERA 😇" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tad-nP-EmL">
+                                        <rect key="frame" x="267" y="566" width="491.5" height="28"/>
                                         <fontDescription key="fontDescription" name="Liberty" family="Liberty" pointSize="24"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.88235294119999996" green="0.98431372549999996" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwo-yq-WKp">
-                                        <rect key="frame" x="375.5" y="568" width="361" height="30"/>
-                                        <state key="normal" title="HINT: TAP THIS TO MAKE WONDER WOMAN HAPPY"/>
+                                        <rect key="frame" x="422" y="638" width="180" height="30"/>
+                                        <color key="backgroundColor" red="0.27843137254901962" green="0.49411764705882355" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="180" id="3rO-wM-b9F"/>
+                                        </constraints>
+                                        <state key="normal" title="TURN ON CAMRERA">
+                                            <color key="titleColor" red="0.88235294119999996" green="0.98431372549999996" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="cameraPermissionButton:" destination="Vyj-kC-Twn" eventType="touchUpInside" id="xyr-6m-lkH"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1o-De-vBf">
-                                        <rect key="frame" x="511.5" y="151.5" width="89.5" height="33"/>
-                                        <fontDescription key="fontDescription" name="Bungee-Regular" family="Bungee" pointSize="28"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="npg5402" translatesAutoresizingMaskIntoConstraints="NO" id="l50-ce-WVf">
-                                        <rect key="frame" x="306" y="509" width="500" height="281"/>
+                                        <rect key="frame" x="192" y="204" width="640" height="360"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="500" id="Qqd-P1-Bjl"/>
                                             <constraint firstAttribute="width" secondItem="l50-ce-WVf" secondAttribute="height" multiplier="16:9" id="fSh-rw-izs"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tears-superheroe-comic-wonderwoman-Favim.com-4225814" translatesAutoresizingMaskIntoConstraints="NO" id="JWR-q4-6bV">
-                                        <rect key="frame" x="24" y="490" width="219" height="300"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="300" id="Jyl-5H-E7g"/>
-                                            <constraint firstAttribute="width" secondItem="JWR-q4-6bV" secondAttribute="height" multiplier="499:684" id="ype-k3-fJG"/>
-                                        </constraints>
-                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4V-Vh-cFd">
-                                        <rect key="frame" x="979" y="739" width="46" height="30"/>
-                                        <state key="normal" title="Next &gt;"/>
+                                        <rect key="frame" x="422" y="638" width="180" height="30"/>
+                                        <color key="backgroundColor" red="0.2784313725" green="0.4941176471" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="CONTINUE">
+                                            <color key="titleColor" red="0.88235294119999996" green="0.98431372549999996" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <segue destination="coe-Lv-vf0" kind="presentation" modalTransitionStyle="crossDissolve" id="0Cl-1Y-pcm"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Killing-Joke-Feature" translatesAutoresizingMaskIntoConstraints="NO" id="s5p-Qj-XH8">
+                                        <rect key="frame" x="311" y="234" width="402" height="300"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="s5p-Qj-XH8" secondAttribute="height" multiplier="67:50" id="AOA-cR-9a4"/>
+                                            <constraint firstAttribute="height" constant="300" id="jle-sg-4GZ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jokers Private Files" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3X-ve-37x">
+                                        <rect key="frame" x="390.5" y="137.5" width="243.5" height="33"/>
+                                        <fontDescription key="fontDescription" name="Bungee-Regular" family="Bungee" pointSize="28"/>
+                                        <color key="textColor" red="0.88235294119999996" green="0.98431372549999996" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.13333333333333333" green="0.1764705882352941" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="e4V-Vh-cFd" secondAttribute="bottom" constant="45" id="4lb-vv-jMk"/>
-                                    <constraint firstItem="tad-nP-EmL" firstAttribute="top" secondItem="M5Q-G6-in3" secondAttribute="bottom" constant="232.5" id="7Hz-T2-Uog"/>
+                                    <constraint firstItem="e4V-Vh-cFd" firstAttribute="centerX" secondItem="cwo-yq-WKp" secondAttribute="centerX" id="0VH-MG-pGF"/>
+                                    <constraint firstItem="tad-nP-EmL" firstAttribute="top" secondItem="s5p-Qj-XH8" secondAttribute="bottom" constant="32" id="14D-xS-IIg"/>
+                                    <constraint firstItem="s5p-Qj-XH8" firstAttribute="centerX" secondItem="r9D-F7-Lkr" secondAttribute="centerX" id="7Xa-Hz-f5B"/>
+                                    <constraint firstItem="l50-ce-WVf" firstAttribute="centerY" secondItem="r9D-F7-Lkr" secondAttribute="centerY" id="AZK-M7-OZl"/>
+                                    <constraint firstAttribute="bottom" secondItem="e4V-Vh-cFd" secondAttribute="bottom" constant="100" id="BQI-Kd-qnF"/>
                                     <constraint firstItem="tad-nP-EmL" firstAttribute="centerX" secondItem="r9D-F7-Lkr" secondAttribute="centerX" id="DYk-x7-RtD"/>
-                                    <constraint firstItem="JWR-q4-6bV" firstAttribute="leading" secondItem="r9D-F7-Lkr" secondAttribute="leading" constant="24" id="Ej4-lF-9B6"/>
                                     <constraint firstItem="M5Q-G6-in3" firstAttribute="top" secondItem="r9D-F7-Lkr" secondAttribute="top" constant="64" id="HME-2b-VI4"/>
-                                    <constraint firstAttribute="trailing" secondItem="e4V-Vh-cFd" secondAttribute="trailing" constant="87" id="HYR-v4-PYo"/>
                                     <constraint firstItem="M5Q-G6-in3" firstAttribute="centerX" secondItem="r9D-F7-Lkr" secondAttribute="centerX" id="Hbw-k8-VYT"/>
-                                    <constraint firstItem="cwo-yq-WKp" firstAttribute="top" secondItem="tad-nP-EmL" secondAttribute="bottom" constant="178" id="OFt-mk-6z3"/>
-                                    <constraint firstItem="j1o-De-vBf" firstAttribute="centerX" secondItem="r9D-F7-Lkr" secondAttribute="centerX" id="QRP-SU-TCF"/>
-                                    <constraint firstItem="tad-nP-EmL" firstAttribute="top" secondItem="lhg-1j-0mo" secondAttribute="bottom" constant="24" id="dag-vX-F6S"/>
-                                    <constraint firstAttribute="bottom" secondItem="JWR-q4-6bV" secondAttribute="bottom" constant="24" id="eEc-mi-mf3"/>
-                                    <constraint firstAttribute="bottom" secondItem="l50-ce-WVf" secondAttribute="bottom" constant="24" id="iCO-Aq-WNT"/>
-                                    <constraint firstItem="j1o-De-vBf" firstAttribute="top" secondItem="M5Q-G6-in3" secondAttribute="bottom" constant="22" id="mbO-OW-2YV"/>
-                                    <constraint firstItem="lhg-1j-0mo" firstAttribute="centerX" secondItem="r9D-F7-Lkr" secondAttribute="centerX" id="oak-61-vsJ"/>
+                                    <constraint firstItem="e4V-Vh-cFd" firstAttribute="centerY" secondItem="cwo-yq-WKp" secondAttribute="centerY" id="NCI-e6-M9n"/>
+                                    <constraint firstItem="e4V-Vh-cFd" firstAttribute="height" secondItem="cwo-yq-WKp" secondAttribute="height" id="Yy6-Q6-3lY"/>
+                                    <constraint firstItem="B3X-ve-37x" firstAttribute="top" secondItem="M5Q-G6-in3" secondAttribute="bottom" constant="8" id="Zkr-ag-xWX"/>
+                                    <constraint firstItem="B3X-ve-37x" firstAttribute="centerX" secondItem="r9D-F7-Lkr" secondAttribute="centerX" id="hkr-37-Un3"/>
+                                    <constraint firstItem="s5p-Qj-XH8" firstAttribute="centerY" secondItem="r9D-F7-Lkr" secondAttribute="centerY" id="iX7-UP-yqY"/>
+                                    <constraint firstItem="e4V-Vh-cFd" firstAttribute="width" secondItem="cwo-yq-WKp" secondAttribute="width" id="pSg-7T-KKi"/>
                                     <constraint firstItem="l50-ce-WVf" firstAttribute="centerX" secondItem="r9D-F7-Lkr" secondAttribute="centerX" id="uAx-TT-PD8"/>
+                                    <constraint firstAttribute="bottom" secondItem="cwo-yq-WKp" secondAttribute="bottom" constant="100" id="vTm-ME-4ct"/>
                                     <constraint firstItem="cwo-yq-WKp" firstAttribute="centerX" secondItem="r9D-F7-Lkr" secondAttribute="centerX" id="xOs-ZQ-4gN"/>
                                 </constraints>
                             </view>
@@ -256,26 +259,25 @@
                         <constraints>
                             <constraint firstItem="r9D-F7-Lkr" firstAttribute="leading" secondItem="Tap-8F-tM5" secondAttribute="leading" id="4OT-hb-ZBR"/>
                             <constraint firstAttribute="bottom" secondItem="r9D-F7-Lkr" secondAttribute="bottom" id="YEo-sR-pE1"/>
-                            <constraint firstItem="r9D-F7-Lkr" firstAttribute="top" secondItem="3L2-pq-kEs" secondAttribute="bottom" id="puP-8x-gpo"/>
+                            <constraint firstItem="r9D-F7-Lkr" firstAttribute="top" secondItem="3L2-pq-kEs" secondAttribute="bottom" constant="-20" id="puP-8x-gpo"/>
                             <constraint firstAttribute="trailing" secondItem="r9D-F7-Lkr" secondAttribute="trailing" id="uGT-vg-OEw"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cameraPermissionButton" destination="cwo-yq-WKp" id="v7u-IJ-Hg8"/>
-                        <outlet property="missionObjectiveLabel" destination="lhg-1j-0mo" id="t8R-sV-vaV"/>
+                        <outlet property="jokerImage" destination="s5p-Qj-XH8" id="Q7e-Rn-eff"/>
                         <outlet property="nextButton" destination="e4V-Vh-cFd" id="JUy-yZ-PkG"/>
                         <outlet property="otherLabel" destination="tad-nP-EmL" id="hjw-Dh-tIc"/>
                         <outlet property="wonderWomanHappy" destination="l50-ce-WVf" id="PZd-sJ-8Ex"/>
-                        <outlet property="wonderWomanSad" destination="JWR-q4-6bV" id="Qrz-pw-v7g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WI4-9L-C6G" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-171" y="62"/>
+            <point key="canvasLocation" x="-171.0431654676259" y="61.870503597122308"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Killing-Joke-Feature" width="670" height="500"/>
         <image name="npg5402" width="640" height="360"/>
-        <image name="tears-superheroe-comic-wonderwoman-Favim.com-4225814" width="499" height="684"/>
     </resources>
 </document>

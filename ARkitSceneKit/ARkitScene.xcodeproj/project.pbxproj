@@ -20,6 +20,8 @@
 		043AD37E1F11B21D004FEFE3 /* OverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043AD37D1F11B21D004FEFE3 /* OverlayViewController.swift */; };
 		043AD3801F11B278004FEFE3 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043AD37F1F11B278004FEFE3 /* MasterViewController.swift */; };
 		04D7415A1F11B82B004790BC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D741591F11B82B004790BC /* MenuViewController.swift */; };
+		8F1249431F11E76100766B26 /* Liberty.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F1249411F11E6BA00766B26 /* Liberty.ttf */; };
+		8F1249441F11E76300766B26 /* Bungee-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F1249421F11E6C500766B26 /* Bungee-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		043AD37D1F11B21D004FEFE3 /* OverlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayViewController.swift; sourceTree = "<group>"; };
 		043AD37F1F11B278004FEFE3 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		04D741591F11B82B004790BC /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		8F1249411F11E6BA00766B26 /* Liberty.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Liberty.ttf; path = ../../../../../Downloads/Liberty.ttf; sourceTree = "<group>"; };
+		8F1249421F11E6C500766B26 /* Bungee-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Bungee-Regular.ttf"; path = "../../../../../Downloads/Bungee/Bungee-Regular.ttf"; sourceTree = "<group>"; };
 		8F442AA21F11DD8300D92BAE /* aquamanMovie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = aquamanMovie.mp4; sourceTree = "<group>"; };
 		8F442AA31F11DD8300D92BAE /* supermanMovie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = supermanMovie.mp4; sourceTree = "<group>"; };
 		8F442AA41F11DD8300D92BAE /* batmanMovie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = batmanMovie.mp4; sourceTree = "<group>"; };
@@ -70,6 +74,8 @@
 		032385721EFEF74C00F241D1 /* ARkitScene */ = {
 			isa = PBXGroup;
 			children = (
+				8F1249411F11E6BA00766B26 /* Liberty.ttf */,
+				8F1249421F11E6C500766B26 /* Bungee-Regular.ttf */,
 				032385731EFEF74C00F241D1 /* AppDelegate.swift */,
 				032385751EFEF74C00F241D1 /* art.scnassets */,
 				032385771EFEF74C00F241D1 /* ViewController.swift */,
@@ -153,6 +159,8 @@
 				03D0C3321F11E4EB00539769 /* wonderWomanMovie.mp4 in Resources */,
 				032385801EFEF74C00F241D1 /* LaunchScreen.storyboard in Resources */,
 				0323857D1EFEF74C00F241D1 /* Assets.xcassets in Resources */,
+				8F1249441F11E76300766B26 /* Bungee-Regular.ttf in Resources */,
+				8F1249431F11E76100766B26 /* Liberty.ttf in Resources */,
 				0323857B1EFEF74C00F241D1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
