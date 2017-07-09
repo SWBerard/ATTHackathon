@@ -42,6 +42,7 @@
 		8F442AA31F11DD8300D92BAE /* supermanMovie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = supermanMovie.mp4; sourceTree = "<group>"; };
 		8F442AA41F11DD8300D92BAE /* batmanMovie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = batmanMovie.mp4; sourceTree = "<group>"; };
 		8F442AA51F11DD8300D92BAE /* wonderWomanMovie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = wonderWomanMovie.mp4; sourceTree = "<group>"; };
+		8F5CE4F11F12A890001FA9F8 /* dcLegendsTrailer.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = dcLegendsTrailer.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +85,7 @@
 				8F442AA31F11DD8300D92BAE /* supermanMovie.mp4 */,
 				8F442AA41F11DD8300D92BAE /* batmanMovie.mp4 */,
 				8F442AA51F11DD8300D92BAE /* wonderWomanMovie.mp4 */,
+				8F5CE4F11F12A890001FA9F8 /* dcLegendsTrailer.mp4 */,
 				0323857C1EFEF74C00F241D1 /* Assets.xcassets */,
 				0323857E1EFEF74C00F241D1 /* LaunchScreen.storyboard */,
 				032385811EFEF74C00F241D1 /* Info.plist */,
