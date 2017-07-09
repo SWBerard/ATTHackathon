@@ -7,39 +7,61 @@
 //
 
 import UIKit
-
-protocol MenuDelegate: class {
-    func userWantsToToggleDebugView()
-}
+import AVFoundation
 
 class MenuViewController: UIViewController {
-    
-    weak var delegate: MenuDelegate?
 
+    @IBOutlet weak var wonderWomanHappy: UIImageView!
+    @IBOutlet weak var wonderWomanSad: UIImageView!
+    @IBOutlet weak var cameraPermissionButton: UIButton!
+    @IBOutlet weak var missionObjectiveLabel: UILabel!
+    @IBOutlet weak var otherLabel: UILabel!
+    @IBOutlet weak var nextButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        view.backgroundColor = UIColor.clear
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        nextButton.alpha = 0.0
+        nextButton.isHidden = true
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func userTappedDebugButton(_ sender: Any) {
-        delegate?.userWantsToToggleDebugView()
+    @IBAction func cameraPermissionButton(_ sender: Any) {
+        AVCaptureDevice.requestAccess(for: AVMediaType.video) { (success) in
+            
+            DispatchQueue.main.async {
+                
+                self.nextButton.isHidden = false
+                
+                self.missionObjectiveLabel.text = "MISSION SUCCESS!"
+                self.otherLabel.text = ""
+                
+                UIView.animate(withDuration: 1, animations: {
+                    self.missionObjectiveLabel.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+                    self.wonderWomanHappy.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+                    self.wonderWomanSad.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+                    
+                    self.wonderWomanHappy.alpha = 0.5
+                    self.wonderWomanSad.alpha = 0.5
+                    self.cameraPermissionButton.alpha = 0.5
+                })
+                
+                UIView.animate(withDuration: 1, delay: 0, options: [], animations: {
+                    self.missionObjectiveLabel.transform = CGAffineTransform(rotationAngle: CGFloat.pi * 20)
+                    self.wonderWomanHappy.transform = CGAffineTransform(rotationAngle: CGFloat.pi * 20)
+                    self.wonderWomanSad.transform = CGAffineTransform(rotationAngle: CGFloat.pi * 20)
+                    
+                    self.wonderWomanHappy.alpha = 1
+                    self.wonderWomanSad.alpha = 0
+                    self.cameraPermissionButton.alpha = 0
+                    self.nextButton.alpha = 1.0
+                }, completion: nil)
+            }
+        }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
