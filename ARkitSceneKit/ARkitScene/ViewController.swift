@@ -33,12 +33,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             self.supermanNodes.insert($0)
         }
         node.addChildNode(wrapper)
-        let url = Bundle.main.url(forResource: "batman", withExtension: "mp4")!
+        let url = Bundle.main.url(forResource: "supermanMovie", withExtension: "mp4")!
         let hieght: CGFloat = 9.0/16.0
         let videoNode = self.createVideoNode(url: url, width: 1, height:hieght).0
         videoNode.position = .init(0, hieght / 2 + 0.5, 0)
         node.addChildNode(videoNode)
-        self.supermanNodes.forEach { $0.isPaused = true }
         return node
     }()
     lazy var batman: SCNNode = {
@@ -88,7 +87,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
         sceneView.delegate = self
-//        sceneView.session.delegate = self
+        sceneView.session.delegate = self
         // Set the scene to the view
         sceneView.scene = SCNScene()
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(tap))

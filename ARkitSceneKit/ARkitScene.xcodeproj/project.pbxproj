@@ -13,6 +13,10 @@
 		0323857B1EFEF74C00F241D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032385791EFEF74C00F241D1 /* Main.storyboard */; };
 		0323857D1EFEF74C00F241D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0323857C1EFEF74C00F241D1 /* Assets.xcassets */; };
 		032385801EFEF74C00F241D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0323857E1EFEF74C00F241D1 /* LaunchScreen.storyboard */; };
+		03D0C32F1F11E4E200539769 /* supermanMovie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8F442AA31F11DD8300D92BAE /* supermanMovie.mp4 */; };
+		03D0C3301F11E4E500539769 /* aquamanMovie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8F442AA21F11DD8300D92BAE /* aquamanMovie.mp4 */; };
+		03D0C3311F11E4E800539769 /* batmanMovie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8F442AA41F11DD8300D92BAE /* batmanMovie.mp4 */; };
+		03D0C3321F11E4EB00539769 /* wonderWomanMovie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8F442AA51F11DD8300D92BAE /* wonderWomanMovie.mp4 */; };
 		043AD37E1F11B21D004FEFE3 /* OverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043AD37D1F11B21D004FEFE3 /* OverlayViewController.swift */; };
 		043AD3801F11B278004FEFE3 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043AD37F1F11B278004FEFE3 /* MasterViewController.swift */; };
 		04D7415A1F11B82B004790BC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D741591F11B82B004790BC /* MenuViewController.swift */; };
@@ -143,6 +147,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				032385761EFEF74C00F241D1 /* art.scnassets in Resources */,
+				03D0C3311F11E4E800539769 /* batmanMovie.mp4 in Resources */,
+				03D0C3301F11E4E500539769 /* aquamanMovie.mp4 in Resources */,
+				03D0C32F1F11E4E200539769 /* supermanMovie.mp4 in Resources */,
+				03D0C3321F11E4EB00539769 /* wonderWomanMovie.mp4 in Resources */,
 				032385801EFEF74C00F241D1 /* LaunchScreen.storyboard in Resources */,
 				0323857D1EFEF74C00F241D1 /* Assets.xcassets in Resources */,
 				0323857B1EFEF74C00F241D1 /* Main.storyboard in Resources */,
