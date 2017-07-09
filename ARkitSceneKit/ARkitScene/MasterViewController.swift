@@ -15,7 +15,7 @@ class MasterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        arVC?.toggleDebugView()
         // Do any additional setup after loading the view.
     }
     
