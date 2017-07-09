@@ -85,7 +85,10 @@
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ar8-BW-VXo">
-                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                                <rect key="frame" x="0.0" y="734" width="1112" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="a0J-w2-kAo"/>
+                                </constraints>
                                 <connections>
                                     <segue destination="Ti8-ch-duN" kind="embed" identifier="menuEmbedSegue" id="SHp-Th-Mf0"/>
                                 </connections>
@@ -96,7 +99,6 @@
                             <constraint firstAttribute="trailing" secondItem="tyq-GM-b21" secondAttribute="trailing" id="5cd-DX-ipl"/>
                             <constraint firstItem="tyq-GM-b21" firstAttribute="top" secondItem="CWM-3c-9eh" secondAttribute="top" id="6fi-dC-pi7"/>
                             <constraint firstItem="tyq-GM-b21" firstAttribute="leading" secondItem="CWM-3c-9eh" secondAttribute="leading" id="6yy-qv-XVS"/>
-                            <constraint firstItem="ar8-BW-VXo" firstAttribute="top" secondItem="CWM-3c-9eh" secondAttribute="top" id="7Fe-0a-GKi"/>
                             <constraint firstAttribute="bottom" secondItem="ar8-BW-VXo" secondAttribute="bottom" id="Yie-5c-56w"/>
                             <constraint firstAttribute="bottom" secondItem="tyq-GM-b21" secondAttribute="bottom" id="Z7s-w1-iDR"/>
                             <constraint firstAttribute="trailing" secondItem="ar8-BW-VXo" secondAttribute="trailing" id="bpW-P8-sHQ"/>
@@ -117,11 +119,11 @@
                         <viewControllerLayoutGuide type="bottom" id="1ed-hd-e5c"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lNu-K9-SjF">
-                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7f-IT-D2Z">
-                                <rect key="frame" x="60" y="724" width="48" height="30"/>
+                                <rect key="frame" x="60" y="6" width="48" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Debug">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -133,7 +135,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottomMargin" secondItem="Q7f-IT-D2Z" secondAttribute="bottom" constant="80" id="Vrj-Jx-fqZ"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Q7f-IT-D2Z" secondAttribute="bottom" constant="64" id="Vrj-Jx-fqZ"/>
                             <constraint firstItem="Q7f-IT-D2Z" firstAttribute="leading" secondItem="lNu-K9-SjF" secondAttribute="leadingMargin" constant="40" id="y36-zl-YqX"/>
                         </constraints>
                     </view>
