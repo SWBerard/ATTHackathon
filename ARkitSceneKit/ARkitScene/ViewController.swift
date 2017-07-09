@@ -23,12 +23,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     var batmanVideoNode: SCNNode!
     var wonderWomanVideoNode: SCNNode!
     var auqamanVideoNode: SCNNode!
+    var dcLogoNode: SCNNode!
     static let modelScale: Float = 0.1
     lazy var superman: SCNNode = {
-        let scene = SCNScene(named: "art.scnassets/superman.dae")!.rootNode
+        let scene = SCNScene(named: "art.scnassets/ss.dae")!.rootNode
         let node = SCNNode()
         let wrapper = SCNNode()
-        wrapper.transform = SCNMatrix4MakeScale(1/212.0*modelScale*1.22, 1/212.0*modelScale*1.22,1/212.0*modelScale*1.22)
+        wrapper.transform = SCNMatrix4MakeScale(1/212.0*modelScale*1, 1/212.0*modelScale*1,1/212.0*modelScale*1)
         scene.childNodes.forEach {
             wrapper.addChildNode($0)
         }
@@ -50,7 +51,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         return node
     }()
     lazy var wonderWoman: SCNNode = {
-        let scene = SCNScene(named: "art.scnassets/ww.dae")!.rootNode
+        let scene = SCNScene(named: "art.scnassets/ww2.dae")!.rootNode
         let node = SCNNode()
         let wrapper = SCNNode()
         wrapper.transform = SCNMatrix4MakeScale(1/212*modelScale, 1/212*modelScale,1/212*modelScale)
@@ -90,7 +91,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         scene.childNodes.forEach {
             wrapper.addChildNode($0)
         }
-
+        self.dcLogoNode = wrapper.childNodes.first
         wrapper.transform = SCNMatrix4Translate(SCNMatrix4MakeScale(1/wrapper.boundingSphere.radius*modelScale*0.25, 1/wrapper.boundingSphere.radius*modelScale*0.25, 1/wrapper.boundingSphere.radius*modelScale*0.25), -1/wrapper.boundingSphere.radius*modelScale*0.25*0.25, 0, 0) 
         node.addChildNode(wrapper)
 
@@ -127,7 +128,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         configuration.isLightEstimationEnabled = true
         // Run the view's session
         sceneView.session = ARSession()
-        sceneView.debugOptions = [ARSCNDebugOptions.showWorldOrigin, ARSCNDebugOptions.showFeaturePoints]
+        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
         sceneView.session.run(configuration)
         sceneView.showsStatistics = true
         sceneView.scene.rootNode.addChildNode(batman)
@@ -144,18 +145,22 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let location = recognizer.location(in: sceneView)
         let geometeryHits = sceneView.hitTest(location, options: nil)
         if let node = geometeryHits.first?.node {
-            if supermanNodes.contains(node) {
-                let url = Bundle.main.url(forResource: "supermanMovie", withExtension: "mp4")!
+            if node === supermanVideoNode {
+
+            } else if node === dcLogoNode {
+                let url = Bundle.main.url(forResource: "dcLegendsTrailer", withExtension: "mp4")!
                 assignVideoTexture(url: url)
-            }
-            else if batmanNodes.contains(batman) {
-                let url = Bundle.main.url(forResource: "batmanMovie", withExtension: "mp4")!
+            } else if supermanNodes.contains(node) {
+                let url = Bundle.main.url(forResource: "supermanMovie", withExtension: "mp4")!
                 assignVideoTexture(url: url)
             } else if wonderWomanNodes.contains(node) {
                 let url = Bundle.main.url(forResource: "wonderWomanMovie", withExtension: "mp4")!
                 assignVideoTexture(url: url)
             } else if aquamanNodes.contains(node){
                 let url = Bundle.main.url(forResource: "aquamanMovie", withExtension: "mp4")!
+                assignVideoTexture(url: url)
+            } else if batmanNodes.contains(batman) {
+                let url = Bundle.main.url(forResource: "batmanMovie", withExtension: "mp4")!
                 assignVideoTexture(url: url)
             }
             return
@@ -247,7 +252,6 @@ extension ViewController: ARSessionDelegate {
         print(type(of: anchor))
 
         if let anchor = anchor as? ARPlaneAnchor {
-
             self.log(text: "Adding plane anchor: \(anchor)")
             let plane = SCNPlane(width: CGFloat(anchor.extent.x), height: CGFloat(anchor.extent.z))
             let planeNode = SCNNode(geometry: plane)
