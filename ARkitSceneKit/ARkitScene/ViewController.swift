@@ -19,7 +19,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     var batmanNodes: Set<SCNNode> = []
     var wonderWomanNodes: Set<SCNNode> = []
     var aquamanNodes: Set<SCNNode> = []
-    var superMmanVideoNode: SCNNode!
+    var supermanVideoNode: SCNNode!
     var batmanVideoNode: SCNNode!
     var wonderWomanVideoNode: SCNNode!
     var auqamanVideoNode: SCNNode!
@@ -28,63 +28,67 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let scene = SCNScene(named: "art.scnassets/superman.dae")!.rootNode
         let node = SCNNode()
         let wrapper = SCNNode()
-        wrapper.transform = SCNMatrix4MakeScale(1/212.0*modelScale, 1/212.0*modelScale,1/212.0*modelScale)
+        wrapper.transform = SCNMatrix4MakeScale(1/212.0*modelScale*1.22, 1/212.0*modelScale*1.22,1/212.0*modelScale*1.22)
         scene.childNodes.forEach {
             wrapper.addChildNode($0)
-            self.supermanNodes.insert($0)
         }
+        self.supermanNodes = wrapper.descendents
         node.addChildNode(wrapper)
-        let url = Bundle.main.url(forResource: "supermanMovie", withExtension: "mp4")!
-        let hieght: CGFloat = 9.0/16.0
-        let videoNode = self.createVideoNode(url: url, width: 1, height:hieght).0
-        videoNode.position = .init(0, hieght / 2, 0)
-        node.addChildNode(videoNode)
-
         return node
     }()
     lazy var batman: SCNNode = {
         let scene = SCNScene(named: "art.scnassets/batmanidle.dae")!.rootNode
         let node = SCNNode()
         let wrapper = SCNNode()
-        wrapper.transform = SCNMatrix4Rotate(SCNMatrix4MakeScale(0.0025, 0.0025, 0.0025), 0, 1, 0, 0)
+
         scene.childNodes.forEach {
             wrapper.addChildNode($0)
-            self.batmanNodes.insert($0)
         }
+        self.batmanNodes = wrapper.descendents
+        wrapper.transform = SCNMatrix4MakeScale(1/wrapper.boundingSphere.radius*modelScale*0.6, 1/wrapper.boundingSphere.radius*modelScale*0.6, 1/wrapper.boundingSphere.radius*modelScale*0.6)
         node.addChildNode(wrapper)
-        let url = Bundle.main.url(forResource: "batman", withExtension: "mp4")!
-        let hieght: CGFloat = 9.0/16.0
-        let videoNode = self.createVideoNode(url: url, width: 1, height:hieght).0
-        videoNode.position = .init(0, hieght / 2 + 0.5, 0)
-        node.addChildNode(videoNode)
         return node
     }()
     lazy var wonderWoman: SCNNode = {
-        let scene = SCNScene(named: "art.scnassets/wonderwoman.dae")!.rootNode
+        let scene = SCNScene(named: "art.scnassets/ww.dae")!.rootNode
         let node = SCNNode()
         let wrapper = SCNNode()
         wrapper.transform = SCNMatrix4MakeScale(1/212*modelScale, 1/212*modelScale,1/212*modelScale)
-        scene.childNodes.forEach { wrapper.addChildNode($0) }
+        scene.childNodes.forEach {
+            wrapper.addChildNode($0)
+        }
+        self.wonderWomanNodes = wrapper.descendents
         node.addChildNode(wrapper)
-        let url = Bundle.main.url(forResource: "batman", withExtension: "mp4")!
-        let hieght: CGFloat = 9.0/16.0
-        let videoNode = self.createVideoNode(url: url, width: 1, height:hieght).0
-        videoNode.position = .init(0, hieght / 2 + 0.5, 0)
-        node.addChildNode(videoNode)
         return node
     }()
     lazy var aquaman: SCNNode = {
-        let scene = SCNScene(named: "art.scnassets/aquaman.dae")!.rootNode
+        let scene = SCNScene(named: "art.scnassets/aman.dae")!.rootNode
         let node = SCNNode()
         let wrapper = SCNNode()
         wrapper.transform = SCNMatrix4MakeScale(1/220*modelScale, 1/220*modelScale,1/220*modelScale)
-        scene.childNodes.forEach { wrapper.addChildNode($0) }
+        scene.childNodes.forEach {
+            wrapper.addChildNode($0)
+        }
+        self.aquamanNodes = wrapper.descendents
         node.addChildNode(wrapper)
-        let url = Bundle.main.url(forResource: "batman", withExtension: "mp4")!
+        return node
+    }()
+
+    lazy var heroNode: SCNNode = {
+        let node = SCNNode()
+        for (index, model) in [self.superman, self.batman, self.wonderWoman, self.aquaman].enumerated() {
+            let wrapper = SCNNode()
+            wrapper.transform = SCNMatrix4MakeTranslation((1 - 0.5 * Float(index) - 0.25) * 0.25, 0, 0)
+            wrapper.addChildNode(model)
+            node.addChildNode(wrapper)
+        }
+        let center = SCNSphere(radius: 0.02)
+        node.addChildNode(SCNNode(geometry: center))
+        let url = Bundle.main.url(forResource: "supermanMovie", withExtension: "mp4")!
         let hieght: CGFloat = 9.0/16.0
-        let videoNode = self.createVideoNode(url: url, width: 1, height:hieght).0
-        videoNode.position = .init(0, hieght / 2 + 0.5, 0)
-        node.addChildNode(videoNode)
+        self.supermanVideoNode = self.createVideoNode(url: url, width: 0.3, height:hieght * 0.3)
+        self.supermanVideoNode.transform = SCNMatrix4MakeTranslation(0, 0.15, -0.1)
+        node.addChildNode(self.supermanVideoNode)
         return node
     }()
     override func viewDidLoad() {
@@ -112,10 +116,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         configuration.isLightEstimationEnabled = true
         // Run the view's session
         sceneView.session = ARSession()
-            sceneView.debugOptions = [ARSCNDebugOptions.showWorldOrigin, ARSCNDebugOptions.showFeaturePoints]
+        sceneView.debugOptions = [ARSCNDebugOptions.showWorldOrigin, ARSCNDebugOptions.showFeaturePoints]
         sceneView.session.run(configuration)
         sceneView.showsStatistics = true
-        sceneView.scene.rootNode.addChildNode(superman)
+        sceneView.scene.rootNode.addChildNode(batman)
         log(text: "start logging")
     }
 
@@ -130,15 +134,19 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let geometeryHits = sceneView.hitTest(location, options: nil)
         if let node = geometeryHits.first?.node {
             if supermanNodes.contains(node) {
-                log(text: "You tapped superman!")
+                let url = Bundle.main.url(forResource: "supermanMovie", withExtension: "mp4")!
+                assignVideoTexture(url: url)
             }
-//            else if batmanNodes.contains(batman) {
-//                log(text: "You tapped batman!")
-//            } else if wonderWomanNodes.contains(node) {
-//                log(text: "You tapped wonder woman!")
-//            } else if aquamanNodes.contains(node){
-//                log(text: "You tapped aquaman")
-//            }
+            else if batmanNodes.contains(batman) {
+                let url = Bundle.main.url(forResource: "batmanMovie", withExtension: "mp4")!
+                assignVideoTexture(url: url)
+            } else if wonderWomanNodes.contains(node) {
+                let url = Bundle.main.url(forResource: "wonderWomanMovie", withExtension: "mp4")!
+                assignVideoTexture(url: url)
+            } else if aquamanNodes.contains(node){
+                let url = Bundle.main.url(forResource: "aquamanMovie", withExtension: "mp4")!
+                assignVideoTexture(url: url)
+            }
             return
         }
 
@@ -154,18 +162,18 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     @objc func pinch(recognizer: UIPinchGestureRecognizer) {
         print(superman.scale.x)
-        let scale = 0.9*recognizer.scale + 0.1*recognizer.scale * CGFloat(superman.scale.x)
-        superman.scale = .init(scale, scale, scale)
+        let scale = 0.9*recognizer.scale + 0.1*recognizer.scale * CGFloat(heroNode.presentation.scale.x)
+        heroNode.scale = .init(scale, scale, scale)
     }
 
     @objc func pan(recognizer: UIPanGestureRecognizer) {
         switch recognizer.state {
         case .began:
-            superman.removeAllAnimations()
+            heroNode.removeAllAnimations()
         case .changed:
             let delta = recognizer.translation(in: sceneView)
             let rotationY = delta.x / UIScreen.main.bounds.size.width * CGFloat.pi * 2
-            superman.eulerAngles = SCNVector3(0, rotationY, 0)
+            heroNode.eulerAngles = SCNVector3(0, rotationY, 0)
         case .cancelled, .ended, .failed:
             break
         default:
@@ -192,24 +200,24 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         }
     }
 
-    func createVideoNode(url: URL, width: CGFloat, height: CGFloat) -> (SCNNode, SKVideoNode) {
+    func createVideoNode(url: URL, width: CGFloat, height: CGFloat) -> SCNNode {
+        let videoNode = SCNNode()
+        videoNode.geometry = SCNPlane(width: width, height: height)
+       return videoNode
+
+    }
+
+    func assignVideoTexture(url: URL) {
         let spriteKitScene = SKScene(size: CGSize(width: 1276.0 / 2.0, height: 712.0 / 2.0))
         let videoSpriteKitNode = SKVideoNode(url: url)
-        let videoNode = SCNNode()
-
-        videoNode.geometry = SCNPlane(width: width, height: height)
-
         spriteKitScene.scaleMode = .aspectFill
         videoSpriteKitNode.position = CGPoint(x: spriteKitScene.size.width / 2.0, y: spriteKitScene.size.height / 2.0)
         videoSpriteKitNode.size = spriteKitScene.size
         videoSpriteKitNode.yScale = -1
         spriteKitScene.addChild(videoSpriteKitNode)
-
-        videoNode.geometry?.firstMaterial?.diffuse.contents = spriteKitScene
-        videoNode.geometry?.firstMaterial?.isDoubleSided = true
-
-       return (videoNode, videoSpriteKitNode)
-
+        supermanVideoNode.geometry?.firstMaterial?.diffuse.contents = spriteKitScene
+        supermanVideoNode.geometry?.firstMaterial?.isDoubleSided = true
+        videoSpriteKitNode.play()
     }
 
     func log(text: CustomStringConvertible) {
@@ -222,7 +230,7 @@ extension ViewController: ARSessionDelegate {
         guard userAnchorIds.contains(anchor.identifier) else {
             return nil
         }
-        return superman
+        return heroNode
     }
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         print(type(of: anchor))
@@ -266,5 +274,22 @@ extension ViewController: ARSessionDelegate {
         case .limited(let reason):
             self.log(text: "Limited Tracking: \(reason)")
         }
+    }
+}
+
+extension SCNNode {
+    var descendents: Set<SCNNode> {
+        var nodes: Set<SCNNode> = []
+        var queue: [SCNNode] = []
+        queue.append(self)
+        while !queue.isEmpty {
+            let current = queue.first!
+            queue.removeFirst()
+            current.childNodes.forEach {
+                nodes.insert($0)
+                queue.append($0)
+            }
+        }
+        return nodes
     }
 }
