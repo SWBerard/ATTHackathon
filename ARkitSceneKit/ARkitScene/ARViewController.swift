@@ -1,18 +1,18 @@
 //
-//  ViewController.swift
+//  ARViewController.swift
 //  ARkitScene
 //
-//  Created by Joshua Homann on 6/24/17.
+//  Created by Steven Berard on 7/8/17.
 //  Copyright © 2017 josh. All rights reserved.
 //
 
 import UIKit
-import SceneKit
 import ARKit
 
-class ViewController: UIViewController, ARSCNViewDelegate {
+class ARViewController: UIViewController, ARSCNViewDelegate {
+    
     @IBOutlet var sceneView: ARSCNView!
-    @IBOutlet weak var textView: UITextView!
+    
     var userAnchorIds: Set<UUID> = []
     lazy var superman: SCNNode = {
         let scene = SCNScene(named: "art.scnassets/Superman.dae")!.rootNode
@@ -21,15 +21,17 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         wrapper.transform = SCNMatrix4Rotate(SCNMatrix4MakeScale(0.1, 0.1, 0.1), -Float.pi/2, 1, 0, 0)
         scene.childNodes.forEach { wrapper.addChildNode($0) }
         node.addChildNode(wrapper)
-        let url = Bundle.main.url(forResource: "a", withExtension: "mp4")!
-        let hieght: CGFloat = 9.0/16.0
-        let videoNode = self.createVideoNode(url: url, width: 1, height:hieght).0
-        videoNode.position = .init(0, hieght / 2 + 0.5, 0)
-        node.addChildNode(videoNode)
+        //        let url = Bundle.main.url(forResource: "a", withExtension: "mp4")!
+        //        let hieght: CGFloat = 9.0/16.0
+        //        let videoNode = self.createVideoNode(url: url, width: 1, height:hieght).0
+        //        videoNode.position = .init(0, hieght / 2 + 0.5, 0)
+        //        node.addChildNode(videoNode)
         return node
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("view is loading")
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
         sceneView.delegate = self
@@ -43,7 +45,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let pan = UIPanGestureRecognizer(target: self, action: #selector(pan(recognizer:)))
         sceneView.addGestureRecognizer(pan)
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // Create a session configuration
@@ -56,15 +58,15 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.showsStatistics = true
         sceneView.scene.rootNode.addChildNode(superman)
         log(text: "start logging")
-
+        
     }
-
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         // Pause the view's session
         sceneView.session.pause()
     }
-
+    
     @objc func tap(recognizer: UITapGestureRecognizer) {
         let location = recognizer.location(in: view)
         let normalizedPoint = CGPoint(x: location.x / view.bounds.size.width, y: location.y / view.bounds.size.height)
@@ -76,7 +78,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         userAnchorIds.insert(hitAnchor.identifier)
         sceneView.session.add(anchor: hitAnchor)
     }
-
+    
     @objc func pinch(recognizer: UIPinchGestureRecognizer) {
         let scale = recognizer.scale
         superman.scale = .init(scale, scale, scale)
@@ -96,35 +98,35 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             break
         }
     }
-
+    
     func createVideoNode(url: URL, width: CGFloat, height: CGFloat) -> (SCNNode, SKVideoNode) {
         let spriteKitScene = SKScene(size: CGSize(width: 1276.0 / 2.0, height: 712.0 / 2.0))
         let videoSpriteKitNode = SKVideoNode(url: url)
         let videoNode = SCNNode()
-
+        
         videoNode.geometry = SCNPlane(width: width, height: height)
-
+        
         spriteKitScene.scaleMode = .aspectFill
         videoSpriteKitNode.position = CGPoint(x: spriteKitScene.size.width / 2.0, y: spriteKitScene.size.height / 2.0)
         videoSpriteKitNode.size = spriteKitScene.size
         spriteKitScene.addChild(videoSpriteKitNode)
-
+        
         videoNode.geometry?.firstMaterial?.diffuse.contents = spriteKitScene
         videoNode.geometry?.firstMaterial?.isDoubleSided = true
-
+        
         let transform = SCNMatrix4MakeRotation(Float.pi, 0.0, 0.0, 1.0)
         videoNode.geometry?.firstMaterial?.diffuse.contentsTransform = SCNMatrix4Translate(transform, 1.0, 1.0, 0)
-
-       return (videoNode, videoSpriteKitNode)
-
+        
+        return (videoNode, videoSpriteKitNode)
+        
     }
-
+    
     func log(text: CustomStringConvertible) {
-        textView.text.append(text.description)
+//        textView.text.append(text.description)
     }
 }
 
-extension ViewController: ARSessionDelegate {
+extension ARViewController: ARSessionDelegate {
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
         guard userAnchorIds.contains(anchor.identifier) else {
             return nil
@@ -141,22 +143,22 @@ extension ViewController: ARSessionDelegate {
             node.addChildNode(planeNode)
         }
     }
-
+    
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
         print(anchor)
     }
-
+    
     func renderer(_ renderer: SCNSceneRenderer, didRemove node: SCNNode, for anchor: ARAnchor) {
         print(anchor)
     }
     func session(_ session: ARSession, didUpdate frame: ARFrame) {
-
+        
     }
-
+    
     func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
         
     }
-
+    
     func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
         switch camera.trackingState {
         case .normal:
@@ -168,4 +170,3 @@ extension ViewController: ARSessionDelegate {
         }
     }
 }
-

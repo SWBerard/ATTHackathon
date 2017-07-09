@@ -12,10 +12,13 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var overLayWindow: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+//        showMainView()
+        
         return true
     }
 
@@ -40,7 +43,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+    func showMainView() {
+        
+        let screenBounds = UIScreen.main.bounds
+        
+        window = UIWindow(frame: screenBounds)
+        
+        guard let storyboard = UIStoryboard(name: "Main", bundle: nil) as UIStoryboard? else {
+            
+            fatalError("No storyboard named Main!")
+        }
+        
+        window?.rootViewController = storyboard.instantiateInitialViewController()
+        window?.isHidden = false
+        
+        overLayWindow = UIWindow(frame: screenBounds)
+        
+        overLayWindow?.rootViewController = MenuViewController()
+        overLayWindow?.isHidden = false
+        overLayWindow?.isOpaque = false
+    }
 
 }
 
