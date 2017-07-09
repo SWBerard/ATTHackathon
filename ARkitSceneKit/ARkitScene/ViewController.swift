@@ -23,11 +23,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     var batmanVideoNode: SCNNode!
     var wonderWomanVideoNode: SCNNode!
     var auqamanVideoNode: SCNNode!
+    static let modelScale: Float = 0.1
     lazy var superman: SCNNode = {
         let scene = SCNScene(named: "art.scnassets/superman.dae")!.rootNode
         let node = SCNNode()
         let wrapper = SCNNode()
-        wrapper.transform = SCNMatrix4Rotate(SCNMatrix4MakeScale(0.0025, 0.0025, 0.0025), 0, 1, 0, 0)
+        wrapper.transform = SCNMatrix4MakeScale(1/212.0*modelScale, 1/212.0*modelScale,1/212.0*modelScale)
         scene.childNodes.forEach {
             wrapper.addChildNode($0)
             self.supermanNodes.insert($0)
@@ -36,7 +37,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let url = Bundle.main.url(forResource: "supermanMovie", withExtension: "mp4")!
         let hieght: CGFloat = 9.0/16.0
         let videoNode = self.createVideoNode(url: url, width: 1, height:hieght).0
-        videoNode.position = .init(0, hieght / 2 + 0.5, 0)
+        videoNode.position = .init(0, hieght / 2, 0)
         node.addChildNode(videoNode)
 
         return node
@@ -46,7 +47,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let node = SCNNode()
         let wrapper = SCNNode()
         wrapper.transform = SCNMatrix4Rotate(SCNMatrix4MakeScale(0.0025, 0.0025, 0.0025), 0, 1, 0, 0)
-        scene.childNodes.forEach { wrapper.addChildNode($0) }
+        scene.childNodes.forEach {
+            wrapper.addChildNode($0)
+            self.batmanNodes.insert($0)
+        }
         node.addChildNode(wrapper)
         let url = Bundle.main.url(forResource: "batman", withExtension: "mp4")!
         let hieght: CGFloat = 9.0/16.0
@@ -59,7 +63,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let scene = SCNScene(named: "art.scnassets/wonderwoman.dae")!.rootNode
         let node = SCNNode()
         let wrapper = SCNNode()
-        wrapper.transform = SCNMatrix4Rotate(SCNMatrix4MakeScale(0.0025, 0.0025, 0.0025), 0, 1, 0, 0)
+        wrapper.transform = SCNMatrix4MakeScale(1/212*modelScale, 1/212*modelScale,1/212*modelScale)
         scene.childNodes.forEach { wrapper.addChildNode($0) }
         node.addChildNode(wrapper)
         let url = Bundle.main.url(forResource: "batman", withExtension: "mp4")!
@@ -73,7 +77,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let scene = SCNScene(named: "art.scnassets/aquaman.dae")!.rootNode
         let node = SCNNode()
         let wrapper = SCNNode()
-        wrapper.transform = SCNMatrix4Rotate(SCNMatrix4MakeScale(0.0025, 0.0025, 0.0025), 0, 1, 0, 0)
+        wrapper.transform = SCNMatrix4MakeScale(1/220*modelScale, 1/220*modelScale,1/220*modelScale)
         scene.childNodes.forEach { wrapper.addChildNode($0) }
         node.addChildNode(wrapper)
         let url = Bundle.main.url(forResource: "batman", withExtension: "mp4")!
@@ -127,13 +131,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         if let node = geometeryHits.first?.node {
             if supermanNodes.contains(node) {
                 log(text: "You tapped superman!")
-            } else if batmanNodes.contains(batman) {
-                log(text: "You tapped batman!")
-            } else if wonderWomanNodes.contains(node) {
-                log(text: "You tapped wonder woman!")
-            } else if aquamanNodes.contains(node){
-                log(text: "You tapped aquaman")
             }
+//            else if batmanNodes.contains(batman) {
+//                log(text: "You tapped batman!")
+//            } else if wonderWomanNodes.contains(node) {
+//                log(text: "You tapped wonder woman!")
+//            } else if aquamanNodes.contains(node){
+//                log(text: "You tapped aquaman")
+//            }
             return
         }
 
