@@ -49,6 +49,7 @@
                     <connections>
                         <outlet property="sceneView" destination="ZEn-aG-wKa" id="aAz-Wd-bcX"/>
                         <outlet property="textView" destination="Uto-yM-XLn" id="CQ6-Qn-4rB"/>
+                        <outlet property="textViewWidthConstraint" destination="jqI-0L-LbN" id="IGH-YT-K9s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>

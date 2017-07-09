@@ -11,14 +11,15 @@ import SceneKit
 import ARKit
 
 class ViewController: UIViewController, ARSCNViewDelegate {
+    @IBOutlet weak var textViewWidthConstraint: NSLayoutConstraint!
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet weak var textView: UITextView!
     var userAnchorIds: Set<UUID> = []
     lazy var superman: SCNNode = {
-        let scene = SCNScene(named: "art.scnassets/Superman.dae")!.rootNode
+        let scene = SCNScene(named: "art.scnassets/batmanidle.dae")!.rootNode
         let node = SCNNode()
         let wrapper = SCNNode()
-        wrapper.transform = SCNMatrix4Rotate(SCNMatrix4MakeScale(0.1, 0.1, 0.1), -Float.pi/2, 1, 0, 0)
+        wrapper.transform = SCNMatrix4Rotate(SCNMatrix4MakeScale(0.0025, 0.0025, 0.0025), 0, 1, 0, 0)
         scene.childNodes.forEach { wrapper.addChildNode($0) }
         node.addChildNode(wrapper)
         let url = Bundle.main.url(forResource: "a", withExtension: "mp4")!
@@ -40,8 +41,17 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.addGestureRecognizer(recognizer)
         let pinch = UIPinchGestureRecognizer(target: self, action: #selector(pinch(recognizer:)))
         sceneView.addGestureRecognizer(pinch)
+        let right = UISwipeGestureRecognizer(target: self, action: #selector(rightSwipe(recognizer:)))
+        right.direction = .right
+        sceneView.addGestureRecognizer(right)
+        let left = UISwipeGestureRecognizer(target: self, action: #selector(leftSwipe(recognizer:)))
+        left.direction = .left
+        sceneView.addGestureRecognizer(left)
         let pan = UIPanGestureRecognizer(target: self, action: #selector(pan(recognizer:)))
+        pan.require(toFail: right)
+        pan.require(toFail: left)
         sceneView.addGestureRecognizer(pan)
+        textViewWidthConstraint.constant = .ulpOfOne
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -81,6 +91,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let scale = recognizer.scale
         superman.scale = .init(scale, scale, scale)
     }
+
     @objc func pan(recognizer: UIPanGestureRecognizer) {
         switch recognizer.state {
         case .began:
@@ -88,12 +99,25 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         case .changed:
             let delta = recognizer.translation(in: sceneView)
             let rotationY = delta.x / UIScreen.main.bounds.size.width * CGFloat.pi * 2
-            let rotationX = delta.y / UIScreen.main.bounds.size.height * CGFloat.pi * 2
-            superman.eulerAngles = SCNVector3(rotationX, rotationY, 0)
+            superman.eulerAngles = SCNVector3(0, rotationY, 0)
         case .cancelled, .ended, .failed:
             break
         default:
             break
+        }
+    }
+
+    @objc func rightSwipe(recognizer: UISwipeGestureRecognizer) {
+        textViewWidthConstraint.constant = .ulpOfOne
+        UIView.animate(withDuration: 0.25) {
+            self.view.layoutIfNeeded()
+        }
+    }
+
+    @objc func leftSwipe(recognizer: UISwipeGestureRecognizer) {
+        textViewWidthConstraint.constant = 200
+        UIView.animate(withDuration: 0.25) {
+            self.view.layoutIfNeeded()
         }
     }
 
@@ -107,13 +131,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         spriteKitScene.scaleMode = .aspectFill
         videoSpriteKitNode.position = CGPoint(x: spriteKitScene.size.width / 2.0, y: spriteKitScene.size.height / 2.0)
         videoSpriteKitNode.size = spriteKitScene.size
+        videoSpriteKitNode.xScale = -1
         spriteKitScene.addChild(videoSpriteKitNode)
 
         videoNode.geometry?.firstMaterial?.diffuse.contents = spriteKitScene
         videoNode.geometry?.firstMaterial?.isDoubleSided = true
-
-        let transform = SCNMatrix4MakeRotation(Float.pi, 0.0, 0.0, 1.0)
-        videoNode.geometry?.firstMaterial?.diffuse.contentsTransform = SCNMatrix4Translate(transform, 1.0, 1.0, 0)
 
        return (videoNode, videoSpriteKitNode)
 
