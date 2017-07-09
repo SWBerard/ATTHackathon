@@ -13,6 +13,7 @@
 		0323857B1EFEF74C00F241D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032385791EFEF74C00F241D1 /* Main.storyboard */; };
 		0323857D1EFEF74C00F241D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0323857C1EFEF74C00F241D1 /* Assets.xcassets */; };
 		032385801EFEF74C00F241D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0323857E1EFEF74C00F241D1 /* LaunchScreen.storyboard */; };
+		032A0BAD1F12AA7A00BA3738 /* dcLegendsTrailer.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8F5CE4F11F12A890001FA9F8 /* dcLegendsTrailer.mp4 */; };
 		03D0C32F1F11E4E200539769 /* supermanMovie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8F442AA31F11DD8300D92BAE /* supermanMovie.mp4 */; };
 		03D0C3301F11E4E500539769 /* aquamanMovie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8F442AA21F11DD8300D92BAE /* aquamanMovie.mp4 */; };
 		03D0C3311F11E4E800539769 /* batmanMovie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8F442AA41F11DD8300D92BAE /* batmanMovie.mp4 */; };
@@ -159,6 +160,7 @@
 				03D0C3321F11E4EB00539769 /* wonderWomanMovie.mp4 in Resources */,
 				032385801EFEF74C00F241D1 /* LaunchScreen.storyboard in Resources */,
 				0323857D1EFEF74C00F241D1 /* Assets.xcassets in Resources */,
+				032A0BAD1F12AA7A00BA3738 /* dcLegendsTrailer.mp4 in Resources */,
 				0323857B1EFEF74C00F241D1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

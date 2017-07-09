@@ -76,19 +76,30 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     lazy var heroNode: SCNNode = {
         let node = SCNNode()
-        for (index, model) in [self.superman, self.batman, self.wonderWoman, self.aquaman].enumerated() {
+        for (index, model) in [self.superman, self.batman, self.aquaman, self.wonderWoman].enumerated() {
             let wrapper = SCNNode()
             wrapper.transform = SCNMatrix4MakeTranslation((1 - 0.5 * Float(index) - 0.25) * 0.25, 0, 0)
             wrapper.addChildNode(model)
             node.addChildNode(wrapper)
         }
-        let center = SCNSphere(radius: 0.02)
-        node.addChildNode(SCNNode(geometry: center))
-        let url = Bundle.main.url(forResource: "supermanMovie", withExtension: "mp4")!
+
+
+        let scene = SCNScene(named: "art.scnassets/dc.dae")!.rootNode
+        let dc = SCNNode()
+        let wrapper = SCNNode()
+        scene.childNodes.forEach {
+            wrapper.addChildNode($0)
+        }
+
+        wrapper.transform = SCNMatrix4Translate(SCNMatrix4MakeScale(1/wrapper.boundingSphere.radius*modelScale*0.25, 1/wrapper.boundingSphere.radius*modelScale*0.25, 1/wrapper.boundingSphere.radius*modelScale*0.25), -1/wrapper.boundingSphere.radius*modelScale*0.25*0.25, 0, 0) 
+        node.addChildNode(wrapper)
+
         let hieght: CGFloat = 9.0/16.0
-        self.supermanVideoNode = self.createVideoNode(url: url, width: 0.3, height:hieght * 0.3)
+        self.supermanVideoNode = self.createVideoNode(width: 0.3, height:hieght * 0.3)
         self.supermanVideoNode.transform = SCNMatrix4MakeTranslation(0, 0.15, -0.1)
         node.addChildNode(self.supermanVideoNode)
+        let url = Bundle.main.url(forResource: "dcLegendsTrailer", withExtension: "mp4")!
+        self.assignVideoTexture(url: url)
         return node
     }()
     override func viewDidLoad() {
@@ -200,7 +211,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         }
     }
 
-    func createVideoNode(url: URL, width: CGFloat, height: CGFloat) -> SCNNode {
+    func createVideoNode(width: CGFloat, height: CGFloat) -> SCNNode {
         let videoNode = SCNNode()
         videoNode.geometry = SCNPlane(width: width, height: height)
        return videoNode
