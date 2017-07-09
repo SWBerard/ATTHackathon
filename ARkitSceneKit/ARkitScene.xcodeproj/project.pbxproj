@@ -13,6 +13,8 @@
 		0323857B1EFEF74C00F241D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032385791EFEF74C00F241D1 /* Main.storyboard */; };
 		0323857D1EFEF74C00F241D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0323857C1EFEF74C00F241D1 /* Assets.xcassets */; };
 		032385801EFEF74C00F241D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0323857E1EFEF74C00F241D1 /* LaunchScreen.storyboard */; };
+		043AD37E1F11B21D004FEFE3 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043AD37D1F11B21D004FEFE3 /* MenuViewController.swift */; };
+		043AD3801F11B278004FEFE3 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043AD37F1F11B278004FEFE3 /* MasterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		0323857C1EFEF74C00F241D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0323857F1EFEF74C00F241D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		032385811EFEF74C00F241D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		043AD37D1F11B21D004FEFE3 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		043AD37F1F11B278004FEFE3 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				0323857C1EFEF74C00F241D1 /* Assets.xcassets */,
 				0323857E1EFEF74C00F241D1 /* LaunchScreen.storyboard */,
 				032385811EFEF74C00F241D1 /* Info.plist */,
+				043AD37D1F11B21D004FEFE3 /* MenuViewController.swift */,
+				043AD37F1F11B278004FEFE3 /* MasterViewController.swift */,
 			);
 			path = ARkitScene;
 			sourceTree = "<group>";
@@ -139,7 +145,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043AD3801F11B278004FEFE3 /* MasterViewController.swift in Sources */,
 				032385781EFEF74C00F241D1 /* ViewController.swift in Sources */,
+				043AD37E1F11B21D004FEFE3 /* MenuViewController.swift in Sources */,
 				032385741EFEF74C00F241D1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,7 +281,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = L4WMJSL77G;
+				DEVELOPMENT_TEAM = BCKNZ6J69F;
 				INFOPLIST_FILE = ARkitScene/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = josh.ARkitScene;
@@ -287,7 +295,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = L4WMJSL77G;
+				DEVELOPMENT_TEAM = BCKNZ6J69F;
 				INFOPLIST_FILE = ARkitScene/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = josh.ARkitScene;

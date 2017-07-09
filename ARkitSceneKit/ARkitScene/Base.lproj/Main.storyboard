@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.19" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="coe-Lv-vf0">
     <device id="ipad10_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -38,7 +39,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ofE-Aw-4ga" firstAttribute="width" secondItem="0Ei-sX-kNs" secondAttribute="width" id="AQt-Df-201"/>
                             <constraint firstItem="ofE-Aw-4ga" firstAttribute="height" secondItem="0Ei-sX-kNs" secondAttribute="height" id="FdP-sf-ZkO"/>
@@ -54,6 +55,79 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="892" y="710"/>
+        </scene>
+        <!--Master View Controller-->
+        <scene sceneID="f81-u3-UX2">
+            <objects>
+                <viewController id="coe-Lv-vf0" customClass="MasterViewController" customModule="ARkitScene" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ns7-9F-Yex"/>
+                        <viewControllerLayoutGuide type="bottom" id="EcF-UZ-UdG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CWM-3c-9eh">
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tyq-GM-b21">
+                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="embed" identifier="ARViewEmbedSegue" id="cCw-kd-FYF"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ar8-BW-VXo">
+                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                                <connections>
+                                    <segue destination="Ti8-ch-duN" kind="embed" identifier="menuEmbedSegue" id="SHp-Th-Mf0"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="tyq-GM-b21" secondAttribute="trailing" id="5cd-DX-ipl"/>
+                            <constraint firstItem="tyq-GM-b21" firstAttribute="top" secondItem="CWM-3c-9eh" secondAttribute="top" id="6fi-dC-pi7"/>
+                            <constraint firstItem="tyq-GM-b21" firstAttribute="leading" secondItem="CWM-3c-9eh" secondAttribute="leading" id="6yy-qv-XVS"/>
+                            <constraint firstItem="ar8-BW-VXo" firstAttribute="top" secondItem="CWM-3c-9eh" secondAttribute="top" id="7Fe-0a-GKi"/>
+                            <constraint firstAttribute="bottom" secondItem="ar8-BW-VXo" secondAttribute="bottom" id="Yie-5c-56w"/>
+                            <constraint firstAttribute="bottom" secondItem="tyq-GM-b21" secondAttribute="bottom" id="Z7s-w1-iDR"/>
+                            <constraint firstAttribute="trailing" secondItem="ar8-BW-VXo" secondAttribute="trailing" id="bpW-P8-sHQ"/>
+                            <constraint firstItem="ar8-BW-VXo" firstAttribute="leading" secondItem="CWM-3c-9eh" secondAttribute="leading" id="qlA-Ak-GVQ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dfY-PZ-d0l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-115" y="853"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="HPc-E3-edn">
+            <objects>
+                <viewController id="Ti8-ch-duN" customClass="MenuViewController" customModule="ARkitScene" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lNu-K9-SjF">
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7f-IT-D2Z">
+                                <rect key="frame" x="60" y="724" width="48" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Debug">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="userTappedDebugButton:" destination="Ti8-ch-duN" eventType="touchUpInside" id="Ogc-R4-too"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="Q7f-IT-D2Z" secondAttribute="bottom" constant="80" id="Vrj-Jx-fqZ"/>
+                            <constraint firstItem="Q7f-IT-D2Z" firstAttribute="leading" secondItem="lNu-K9-SjF" secondAttribute="leadingMargin" constant="40" id="y36-zl-YqX"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j9Z-6a-cSX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="262" y="1747"/>
         </scene>
     </scenes>
 </document>

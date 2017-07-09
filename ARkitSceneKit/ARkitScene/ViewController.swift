@@ -22,11 +22,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         wrapper.transform = SCNMatrix4Rotate(SCNMatrix4MakeScale(0.0025, 0.0025, 0.0025), 0, 1, 0, 0)
         scene.childNodes.forEach { wrapper.addChildNode($0) }
         node.addChildNode(wrapper)
-        let url = Bundle.main.url(forResource: "a", withExtension: "mp4")!
-        let hieght: CGFloat = 9.0/16.0
-        let videoNode = self.createVideoNode(url: url, width: 1, height:hieght).0
-        videoNode.position = .init(0, hieght / 2 + 0.5, 0)
-        node.addChildNode(videoNode)
+//        let url = Bundle.main.url(forResource: "a", withExtension: "mp4")!
+//        let hieght: CGFloat = 9.0/16.0
+//        let videoNode = self.createVideoNode(url: url, width: 1, height:hieght).0
+//        videoNode.position = .init(0, hieght / 2 + 0.5, 0)
+//        node.addChildNode(videoNode)
         return node
     }()
     override func viewDidLoad() {
@@ -41,15 +41,15 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.addGestureRecognizer(recognizer)
         let pinch = UIPinchGestureRecognizer(target: self, action: #selector(pinch(recognizer:)))
         sceneView.addGestureRecognizer(pinch)
-        let right = UISwipeGestureRecognizer(target: self, action: #selector(rightSwipe(recognizer:)))
-        right.direction = .right
-        sceneView.addGestureRecognizer(right)
-        let left = UISwipeGestureRecognizer(target: self, action: #selector(leftSwipe(recognizer:)))
-        left.direction = .left
-        sceneView.addGestureRecognizer(left)
+//        let right = UISwipeGestureRecognizer(target: self, action: #selector(rightSwipe(recognizer:)))
+//        right.direction = .right
+//        sceneView.addGestureRecognizer(right)
+//        let left = UISwipeGestureRecognizer(target: self, action: #selector(leftSwipe(recognizer:)))
+//        left.direction = .left
+//        sceneView.addGestureRecognizer(left)
         let pan = UIPanGestureRecognizer(target: self, action: #selector(pan(recognizer:)))
-        pan.require(toFail: right)
-        pan.require(toFail: left)
+//        pan.require(toFail: right)
+//        pan.require(toFail: left)
         sceneView.addGestureRecognizer(pan)
         textViewWidthConstraint.constant = .ulpOfOne
     }
@@ -106,18 +106,23 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             break
         }
     }
-
-    @objc func rightSwipe(recognizer: UISwipeGestureRecognizer) {
-        textViewWidthConstraint.constant = .ulpOfOne
-        UIView.animate(withDuration: 0.25) {
-            self.view.layoutIfNeeded()
+    
+    var isDebugViewVisible = false
+    
+    func toggleDebugView() {
+        if isDebugViewVisible {
+            isDebugViewVisible = false
+            textViewWidthConstraint.constant = .ulpOfOne
+            UIView.animate(withDuration: 0.25) {
+                self.view.layoutIfNeeded()
+            }
         }
-    }
-
-    @objc func leftSwipe(recognizer: UISwipeGestureRecognizer) {
-        textViewWidthConstraint.constant = 200
-        UIView.animate(withDuration: 0.25) {
-            self.view.layoutIfNeeded()
+        else {
+            isDebugViewVisible = true
+            textViewWidthConstraint.constant = 200
+            UIView.animate(withDuration: 0.25) {
+                self.view.layoutIfNeeded()
+            }
         }
     }
 
