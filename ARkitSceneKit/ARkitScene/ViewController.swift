@@ -165,6 +165,25 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         }
     }
 
+    var isDebugViewVisible = false
+
+    func toggleDebugView() {
+        if isDebugViewVisible {
+            isDebugViewVisible = false
+            textViewWidthConstraint.constant = .ulpOfOne
+            UIView.animate(withDuration: 0.25) {
+                self.view.layoutIfNeeded()
+            }
+        }
+        else {
+            isDebugViewVisible = true
+            textViewWidthConstraint.constant = 200
+            UIView.animate(withDuration: 0.25) {
+                self.view.layoutIfNeeded()
+            }
+        }
+    }
+
     func createVideoNode(url: URL, width: CGFloat, height: CGFloat) -> (SCNNode, SKVideoNode) {
         let spriteKitScene = SKScene(size: CGSize(width: 1276.0 / 2.0, height: 712.0 / 2.0))
         let videoSpriteKitNode = SKVideoNode(url: url)
@@ -241,4 +260,3 @@ extension ViewController: ARSessionDelegate {
         }
     }
 }
-

@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.19" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Vyj-kC-Twn">
     <device id="ipad10_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Bungee-Regular.ttf">
+            <string>Bungee-Regular</string>
+        </array>
+        <array key="Liberty.ttf">
+            <string>Liberty</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -38,7 +48,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ofE-Aw-4ga" firstAttribute="width" secondItem="0Ei-sX-kNs" secondAttribute="width" id="AQt-Df-201"/>
                             <constraint firstItem="ofE-Aw-4ga" firstAttribute="height" secondItem="0Ei-sX-kNs" secondAttribute="height" id="FdP-sf-ZkO"/>
@@ -54,6 +64,218 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="892" y="710"/>
+        </scene>
+        <!--Master View Controller-->
+        <scene sceneID="f81-u3-UX2">
+            <objects>
+                <viewController id="coe-Lv-vf0" customClass="MasterViewController" customModule="ARkitScene" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ns7-9F-Yex"/>
+                        <viewControllerLayoutGuide type="bottom" id="EcF-UZ-UdG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CWM-3c-9eh">
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tyq-GM-b21">
+                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="embed" identifier="ARViewEmbedSegue" id="cCw-kd-FYF"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ar8-BW-VXo">
+                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                                <connections>
+                                    <segue destination="Ti8-ch-duN" kind="embed" identifier="menuEmbedSegue" id="SHp-Th-Mf0"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="tyq-GM-b21" secondAttribute="trailing" id="5cd-DX-ipl"/>
+                            <constraint firstItem="tyq-GM-b21" firstAttribute="top" secondItem="CWM-3c-9eh" secondAttribute="top" id="6fi-dC-pi7"/>
+                            <constraint firstItem="tyq-GM-b21" firstAttribute="leading" secondItem="CWM-3c-9eh" secondAttribute="leading" id="6yy-qv-XVS"/>
+                            <constraint firstItem="ar8-BW-VXo" firstAttribute="top" secondItem="CWM-3c-9eh" secondAttribute="top" id="DaM-N1-spf"/>
+                            <constraint firstAttribute="bottom" secondItem="ar8-BW-VXo" secondAttribute="bottom" id="Yie-5c-56w"/>
+                            <constraint firstAttribute="bottom" secondItem="tyq-GM-b21" secondAttribute="bottom" id="Z7s-w1-iDR"/>
+                            <constraint firstAttribute="trailing" secondItem="ar8-BW-VXo" secondAttribute="trailing" id="bpW-P8-sHQ"/>
+                            <constraint firstItem="ar8-BW-VXo" firstAttribute="leading" secondItem="CWM-3c-9eh" secondAttribute="leading" id="qlA-Ak-GVQ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dfY-PZ-d0l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-115" y="853"/>
+        </scene>
+        <!--Overlay View Controller-->
+        <scene sceneID="HPc-E3-edn">
+            <objects>
+                <viewController id="Ti8-ch-duN" customClass="OverlayViewController" customModule="ARkitScene" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AXe-kk-SYw"/>
+                        <viewControllerLayoutGuide type="bottom" id="1ed-hd-e5c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lNu-K9-SjF">
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7f-IT-D2Z">
+                                <rect key="frame" x="60" y="740" width="48" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Debug">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="userTappedDebugButton:" destination="Ti8-ch-duN" eventType="touchUpInside" id="Ogc-R4-too"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="Q7f-IT-D2Z" secondAttribute="bottom" constant="64" id="Vrj-Jx-fqZ"/>
+                            <constraint firstItem="Q7f-IT-D2Z" firstAttribute="leading" secondItem="lNu-K9-SjF" secondAttribute="leadingMargin" constant="40" id="y36-zl-YqX"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="SwL-vA-uXl" appends="YES" id="A1u-du-brP"/>
+                            <outletCollection property="gestureRecognizers" destination="x5J-Eq-vrd" appends="YES" id="mXN-vL-vbj"/>
+                            <outletCollection property="gestureRecognizers" destination="niu-8R-AmY" appends="YES" id="ofR-wb-KdM"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j9Z-6a-cSX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="SwL-vA-uXl">
+                    <connections>
+                        <action selector="userTappedView:" destination="Ti8-ch-duN" id="Bno-ce-mBc"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pinchGestureRecognizer id="x5J-Eq-vrd">
+                    <connections>
+                        <action selector="userPinchedView:" destination="Ti8-ch-duN" id="uc5-D5-9iB"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="niu-8R-AmY">
+                    <connections>
+                        <action selector="userPannedView:" destination="Ti8-ch-duN" id="vor-zQ-5vB"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="262" y="1747"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="8D1-bM-Dwi">
+            <objects>
+                <viewController id="Vyj-kC-Twn" customClass="MenuViewController" customModule="ARkitScene" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3L2-pq-kEs"/>
+                        <viewControllerLayoutGuide type="bottom" id="BeZ-6D-eKq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tap-8F-tM5">
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r9D-F7-Lkr">
+                                <rect key="frame" x="0.0" y="20" width="1112" height="814"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WONDER WOMAN AR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5Q-G6-in3">
+                                        <rect key="frame" x="270" y="64" width="573" height="65.5"/>
+                                        <fontDescription key="fontDescription" name="Bungee-Regular" family="Bungee" pointSize="56"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MISSION OBJECTIVE:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhg-1j-0mo">
+                                        <rect key="frame" x="395" y="300.5" width="322.5" height="37.5"/>
+                                        <fontDescription key="fontDescription" name="Liberty" family="Liberty" pointSize="32"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WONDER WOMAN IS IS UPSET, FIGURE OUT HOW TO MAKE HER HAPPY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tad-nP-EmL">
+                                        <rect key="frame" x="146.5" y="362" width="819" height="28"/>
+                                        <fontDescription key="fontDescription" name="Liberty" family="Liberty" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwo-yq-WKp">
+                                        <rect key="frame" x="375.5" y="568" width="361" height="30"/>
+                                        <state key="normal" title="HINT: TAP THIS TO MAKE WONDER WOMAN HAPPY"/>
+                                        <connections>
+                                            <action selector="cameraPermissionButton:" destination="Vyj-kC-Twn" eventType="touchUpInside" id="xyr-6m-lkH"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1o-De-vBf">
+                                        <rect key="frame" x="511.5" y="151.5" width="89.5" height="33"/>
+                                        <fontDescription key="fontDescription" name="Bungee-Regular" family="Bungee" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="npg5402" translatesAutoresizingMaskIntoConstraints="NO" id="l50-ce-WVf">
+                                        <rect key="frame" x="306" y="509" width="500" height="281"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="500" id="Qqd-P1-Bjl"/>
+                                            <constraint firstAttribute="width" secondItem="l50-ce-WVf" secondAttribute="height" multiplier="16:9" id="fSh-rw-izs"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tears-superheroe-comic-wonderwoman-Favim.com-4225814" translatesAutoresizingMaskIntoConstraints="NO" id="JWR-q4-6bV">
+                                        <rect key="frame" x="24" y="490" width="219" height="300"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="Jyl-5H-E7g"/>
+                                            <constraint firstAttribute="width" secondItem="JWR-q4-6bV" secondAttribute="height" multiplier="499:684" id="ype-k3-fJG"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4V-Vh-cFd">
+                                        <rect key="frame" x="979" y="739" width="46" height="30"/>
+                                        <state key="normal" title="Next &gt;"/>
+                                        <connections>
+                                            <segue destination="coe-Lv-vf0" kind="presentation" modalTransitionStyle="crossDissolve" id="0Cl-1Y-pcm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="e4V-Vh-cFd" secondAttribute="bottom" constant="45" id="4lb-vv-jMk"/>
+                                    <constraint firstItem="tad-nP-EmL" firstAttribute="top" secondItem="M5Q-G6-in3" secondAttribute="bottom" constant="232.5" id="7Hz-T2-Uog"/>
+                                    <constraint firstItem="tad-nP-EmL" firstAttribute="centerX" secondItem="r9D-F7-Lkr" secondAttribute="centerX" id="DYk-x7-RtD"/>
+                                    <constraint firstItem="JWR-q4-6bV" firstAttribute="leading" secondItem="r9D-F7-Lkr" secondAttribute="leading" constant="24" id="Ej4-lF-9B6"/>
+                                    <constraint firstItem="M5Q-G6-in3" firstAttribute="top" secondItem="r9D-F7-Lkr" secondAttribute="top" constant="64" id="HME-2b-VI4"/>
+                                    <constraint firstAttribute="trailing" secondItem="e4V-Vh-cFd" secondAttribute="trailing" constant="87" id="HYR-v4-PYo"/>
+                                    <constraint firstItem="M5Q-G6-in3" firstAttribute="centerX" secondItem="r9D-F7-Lkr" secondAttribute="centerX" id="Hbw-k8-VYT"/>
+                                    <constraint firstItem="cwo-yq-WKp" firstAttribute="top" secondItem="tad-nP-EmL" secondAttribute="bottom" constant="178" id="OFt-mk-6z3"/>
+                                    <constraint firstItem="j1o-De-vBf" firstAttribute="centerX" secondItem="r9D-F7-Lkr" secondAttribute="centerX" id="QRP-SU-TCF"/>
+                                    <constraint firstItem="tad-nP-EmL" firstAttribute="top" secondItem="lhg-1j-0mo" secondAttribute="bottom" constant="24" id="dag-vX-F6S"/>
+                                    <constraint firstAttribute="bottom" secondItem="JWR-q4-6bV" secondAttribute="bottom" constant="24" id="eEc-mi-mf3"/>
+                                    <constraint firstAttribute="bottom" secondItem="l50-ce-WVf" secondAttribute="bottom" constant="24" id="iCO-Aq-WNT"/>
+                                    <constraint firstItem="j1o-De-vBf" firstAttribute="top" secondItem="M5Q-G6-in3" secondAttribute="bottom" constant="22" id="mbO-OW-2YV"/>
+                                    <constraint firstItem="lhg-1j-0mo" firstAttribute="centerX" secondItem="r9D-F7-Lkr" secondAttribute="centerX" id="oak-61-vsJ"/>
+                                    <constraint firstItem="l50-ce-WVf" firstAttribute="centerX" secondItem="r9D-F7-Lkr" secondAttribute="centerX" id="uAx-TT-PD8"/>
+                                    <constraint firstItem="cwo-yq-WKp" firstAttribute="centerX" secondItem="r9D-F7-Lkr" secondAttribute="centerX" id="xOs-ZQ-4gN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="r9D-F7-Lkr" firstAttribute="leading" secondItem="Tap-8F-tM5" secondAttribute="leading" id="4OT-hb-ZBR"/>
+                            <constraint firstAttribute="bottom" secondItem="r9D-F7-Lkr" secondAttribute="bottom" id="YEo-sR-pE1"/>
+                            <constraint firstItem="r9D-F7-Lkr" firstAttribute="top" secondItem="3L2-pq-kEs" secondAttribute="bottom" id="puP-8x-gpo"/>
+                            <constraint firstAttribute="trailing" secondItem="r9D-F7-Lkr" secondAttribute="trailing" id="uGT-vg-OEw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraPermissionButton" destination="cwo-yq-WKp" id="v7u-IJ-Hg8"/>
+                        <outlet property="missionObjectiveLabel" destination="lhg-1j-0mo" id="t8R-sV-vaV"/>
+                        <outlet property="nextButton" destination="e4V-Vh-cFd" id="JUy-yZ-PkG"/>
+                        <outlet property="otherLabel" destination="tad-nP-EmL" id="hjw-Dh-tIc"/>
+                        <outlet property="wonderWomanHappy" destination="l50-ce-WVf" id="PZd-sJ-8Ex"/>
+                        <outlet property="wonderWomanSad" destination="JWR-q4-6bV" id="Qrz-pw-v7g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WI4-9L-C6G" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-171" y="62"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="npg5402" width="640" height="360"/>
+        <image name="tears-superheroe-comic-wonderwoman-Favim.com-4225814" width="499" height="684"/>
+    </resources>
 </document>
